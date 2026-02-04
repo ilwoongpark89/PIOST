@@ -1020,18 +1020,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ============================================
-    // Hero Lines Reveal Animation
+    // Hero Lines Character-by-Character Animation
     // ============================================
     const heroLines = document.querySelectorAll('.hero-line');
-    heroLines.forEach((line, index) => {
-        line.style.opacity = '0';
-        line.style.transform = 'translateY(30px)';
 
-        setTimeout(() => {
-            line.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-            line.style.opacity = '1';
-            line.style.transform = 'translateY(0)';
-        }, 200 + (index * 150));
+    heroLines.forEach((line, lineIndex) => {
+        const text = line.textContent;
+        line.textContent = '';
+        line.style.opacity = '1';
+
+        // Split into characters and wrap each
+        [...text].forEach((char, charIndex) => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? '\u00A0' : char;
+            span.style.display = 'inline-block';
+            span.style.opacity = '0';
+            span.style.transform = 'translateY(20px) translateX(10px)';
+            span.style.transition = 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+            line.appendChild(span);
+
+            // Staggered animation
+            setTimeout(() => {
+                span.style.opacity = '1';
+                span.style.transform = 'translateY(0) translateX(0)';
+            }, 300 + (lineIndex * 400) + (charIndex * 30));
+        });
     });
 
     // Hero description fade in

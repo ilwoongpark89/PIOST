@@ -573,14 +573,33 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
+        // Target Market
+        const targetMarketTitle = document.querySelector('.target-market-title');
+        if (targetMarketTitle) targetMarketTitle.textContent = t.targetMarketTitle;
+
+        const targetMarketCards = document.querySelectorAll('.target-market-card');
+        const targetMarketData = [
+            { title: t.targetMarket1Title, desc: t.targetMarket1Desc },
+            { title: t.targetMarket2Title, desc: t.targetMarket2Desc },
+            { title: t.targetMarket3Title, desc: t.targetMarket3Desc }
+        ];
+        targetMarketCards.forEach((card, i) => {
+            if (targetMarketData[i]) {
+                const h4 = card.querySelector('.target-market-card-title');
+                const p = card.querySelector('.target-market-card-desc');
+                if (h4) h4.textContent = targetMarketData[i].title;
+                if (p) p.textContent = targetMarketData[i].desc;
+            }
+        });
+
         // Technology Comparison
-        const compTitle = document.querySelectorAll('#market .subsection-title')[0];
+        const compTitle = document.querySelectorAll('#market .subsection-title')[1];
         const compDesc = document.querySelectorAll('#market .section-description')[1];
         if (compTitle) compTitle.textContent = t.comparisonTitle;
         if (compDesc) compDesc.textContent = t.comparisonDesc;
 
         // Applications
-        const appTitle = document.querySelectorAll('#market .subsection-title')[1];
+        const appTitle = document.querySelectorAll('#market .subsection-title')[2];
         const appDesc = document.querySelectorAll('#market .section-description')[2];
         if (appTitle) appTitle.textContent = t.applicationsTitle;
         if (appDesc) appDesc.textContent = t.applicationsDesc;
@@ -1078,7 +1097,7 @@ document.addEventListener('DOMContentLoaded', function() {
         '.stat-card', '.solution-card', '.milestone-card',
         '.use-case-card', '.job-card', '.program-category',
         '.pillar-column', '.team-member', '.challenge-block',
-        '.foundation-card'
+        '.foundation-card', '.target-market-card'
     ];
 
     document.querySelectorAll(cardSelectors.join(', ')).forEach((card, index) => {

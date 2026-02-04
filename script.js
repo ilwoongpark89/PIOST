@@ -258,8 +258,8 @@ document.addEventListener('DOMContentLoaded', function() {
             driversTitle: "왜 몽골부터 시작하나요?",
             driver1Title: "극한의 난방 수요",
             driver1Desc: "겨울 평균 -25°C, 연간 8개월 난방 필수. 전 세계에서 가장 춥고, 가장 난방이 절실한 곳입니다.",
-            driver2Title: "석탄 난방의 비극",
-            driver2Desc: "아이들 90%가 대기오염으로 건강 피해를 입고 있습니다. 시위가 빈번할 만큼 사회적 전환 요구가 큽니다.",
+            driver2Title: "탈탄소 정책 가속화",
+            driver2Desc: "몽골 정부는 2030년까지 재생에너지 비중 30% 목표를 세웠습니다. 청정 난방 솔루션에 대한 정책적 수요가 급증하고 있습니다.",
             driver3Title: "재생에너지의 보고",
             driver3Desc: "태양광 2,200GW, 풍력 1,100GW 잠재량. 재생전력 기반 청정 난방의 최적지입니다.",
 
@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ctoTitle: "기술이사",
             ctoRole: "R&D 총괄 · 기술 개발",
             missionTitle: "왜 이 일을 하나요?",
-            missionDesc: "몽골 아이들 90%가 석탄 난방 때문에 아픕니다. 화석연료 없이도 따뜻한 겨울을 보낼 수 있다면—그게 우리가 만들고 싶은 미래입니다.",
+            missionDesc: "전 세계 에너지 소비의 50%는 난방입니다. 하지만 대부분 아직 화석연료에 의존하죠. 재생에너지를 저장하고 필요할 때 공급하는 기술—이게 진짜 에너지 전환입니다.",
             goal1Value: "2050",
             goal1Label: "넷제로",
             goal2Value: "24/7",
@@ -953,6 +953,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ============================================
+    // Hero Animated Gradient Orbs
+    // ============================================
+    const heroBg = document.querySelector('.hero-bg');
+    if (heroBg) {
+        for (let i = 1; i <= 3; i++) {
+            const orb = document.createElement('div');
+            orb.className = `gradient-orb gradient-orb-${i}`;
+            heroBg.appendChild(orb);
+        }
+    }
+
+    // ============================================
+    // Floating Particles
+    // ============================================
+    const heroParticles = document.querySelector('.hero-particles');
+    if (heroParticles) {
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'floating-particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+            heroParticles.appendChild(particle);
+        }
+    }
+
+    // ============================================
     // Hero Lines Reveal Animation
     // ============================================
     const heroLines = document.querySelectorAll('.hero-line');
@@ -1052,6 +1080,20 @@ document.addEventListener('DOMContentLoaded', function() {
         revealObserver.observe(item);
     });
 
+    // Timeline line animation
+    const timeline = document.querySelector('.timeline');
+    if (timeline) {
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-line');
+                    timelineObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        timelineObserver.observe(timeline);
+    }
+
     // Investor card
     document.querySelectorAll('.investor-card').forEach(el => {
         el.classList.add('reveal-scale');
@@ -1092,6 +1134,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     function animateCounter(element, target, duration = 2000, suffix = '') {
         const start = performance.now();
+        element.classList.add('counting');
 
         function update(currentTime) {
             const elapsed = currentTime - start;
@@ -1108,6 +1151,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (progress < 1) {
                 requestAnimationFrame(update);
+            } else {
+                setTimeout(() => element.classList.remove('counting'), 300);
             }
         }
 
@@ -1222,10 +1267,23 @@ document.addEventListener('DOMContentLoaded', function() {
             position: fixed;
             top: 0;
             left: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--primary), #fb7185);
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), #fb7185, var(--primary));
+            background-size: 200% 100%;
             z-index: 9999;
-            transition: width 0.1s ease;
+            transition: width 0.15s ease;
+            animation: progressGradient 3s linear infinite;
+        }
+
+        @keyframes progressGradient {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
+        }
+
+        /* Stat number glow on count */
+        .stat-number.counting {
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(225, 29, 72, 0.3);
         }
 
         /* Reveal Animations */
@@ -1242,13 +1300,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         .reveal-scale {
             opacity: 0;
-            transform: scale(0.95);
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: scale(0.9) translateY(20px);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .reveal-scale.revealed {
             opacity: 1;
-            transform: scale(1);
+            transform: scale(1) translateY(0);
         }
 
         .reveal-left {

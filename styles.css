@@ -2622,10 +2622,27 @@ section {
 
 /* Target Market Section */
 .target-market-section {
-    background: var(--bg-light);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     padding: 3rem 2rem;
     border-radius: var(--radius-xl);
-    margin-top: 3rem;
+    margin-top: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.target-market-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at 30% 0%, rgba(225, 29, 72, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.target-market-section .subsection-title {
+    color: white;
 }
 
 .target-market-grid {
@@ -2636,13 +2653,15 @@ section {
 }
 
 .target-market-card {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: var(--radius-lg);
     text-align: center;
     position: relative;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    backdrop-filter: blur(10px);
 }
 
 .target-market-card::before {
@@ -2651,9 +2670,14 @@ section {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: radial-gradient(ellipse at 50% 0%, rgba(225, 29, 72, 0.15) 0%, transparent 60%);
-    pointer-events: none;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.target-market-card:hover::before {
+    opacity: 1;
 }
 
 .target-market-card:hover {

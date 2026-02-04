@@ -37,6 +37,60 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ============================================
+   Global Animations
+   ============================================ */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(225, 29, 72, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(225, 29, 72, 0.5); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes rotateIn {
+    from { opacity: 0; transform: rotate(-10deg) scale(0.9); }
+    to { opacity: 1; transform: rotate(0) scale(1); }
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
@@ -118,6 +172,22 @@ body {
     font-size: 0.9rem;
     font-weight: 500;
     transition: color 0.3s;
+    position: relative;
+}
+
+.nav-menu a:not(.nav-cta)::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:not(.nav-cta):hover::after {
+    width: 100%;
 }
 
 .navbar.scrolled .nav-menu a {
@@ -187,9 +257,10 @@ body {
     right: 20%;
     width: 500px;
     height: 500px;
-    background: rgba(225, 29, 72, 0.1);
+    background: rgba(225, 29, 72, 0.15);
     border-radius: 50%;
     filter: blur(100px);
+    animation: float 8s ease-in-out infinite;
 }
 
 .hero-bg::after {
@@ -199,17 +270,46 @@ body {
     left: 20%;
     width: 400px;
     height: 400px;
-    background: rgba(59, 130, 246, 0.08);
+    background: rgba(59, 130, 246, 0.1);
     border-radius: 50%;
     filter: blur(100px);
+    animation: float 6s ease-in-out infinite reverse;
 }
 
 .hero-particles {
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
     background-size: 50px 50px;
     opacity: 0.5;
+    transition: transform 0.3s ease;
+}
+
+/* Animated gradient orbs */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(225, 29, 72, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 10s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(251, 113, 133, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: float 7s ease-in-out infinite reverse;
+    pointer-events: none;
 }
 
 .hero-content {
@@ -278,14 +378,33 @@ body {
 }
 
 .btn-primary {
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: white;
-    border: 2px solid var(--primary);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
 }
 
 .btn-primary:hover {
-    background: var(--primary-dark);
-    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(225, 29, 72, 0.4);
 }
 
 .btn-outline {
@@ -320,6 +439,10 @@ section {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, rgba(225, 29, 72, 0.1) 0%, rgba(225, 29, 72, 0.05) 100%);
+    border-radius: 50px;
+    border: 1px solid rgba(225, 29, 72, 0.2);
 }
 
 .section-title {
@@ -447,14 +570,21 @@ section {
     font-size: 1rem;
     font-weight: 700;
     color: white;
-    background: var(--primary);
-    width: 32px;
-    height: 32px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3);
+    transition: all 0.3s ease;
+}
+
+.pillar-card:hover .pillar-number {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(225, 29, 72, 0.4);
 }
 
 .pillar-content h3 {
@@ -543,9 +673,25 @@ section {
 
 .hope-card {
     background: linear-gradient(135deg, var(--primary) 0%, #be123c 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
     color: white;
     padding: 2.5rem;
     border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.hope-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 50%);
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none;
 }
 
 .hope-card h4 {
@@ -579,18 +725,35 @@ section {
 }
 
 .stat-card {
-    background: var(--bg-light);
+    background: linear-gradient(135deg, white 0%, var(--bg-light) 100%);
     padding: 1.5rem 1.25rem;
     border-radius: var(--radius-lg);
     text-align: center;
     border: 1px solid var(--border);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover::before {
+    transform: scaleX(1);
 }
 
 .stat-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
     border-color: var(--primary-light);
+    box-shadow: 0 20px 40px rgba(225, 29, 72, 0.15);
 }
 
 .stat-number {
@@ -816,12 +979,31 @@ section {
     padding: 2.5rem 2rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--border);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.solution-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(225, 29, 72, 0.03) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.solution-card:hover::after {
+    opacity: 1;
 }
 
 .solution-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
 }
 
 .solution-card.featured {
@@ -1240,12 +1422,13 @@ section {
 }
 
 .team-member {
-    background: white;
+    background: linear-gradient(180deg, white 0%, var(--bg-light) 100%);
     padding: 2.5rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--border);
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
 }
 
 .team-member h3 {
@@ -1520,7 +1703,23 @@ section {
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     font-size: 0.9rem;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
 }
 
 .footer-links a:hover {
@@ -1546,6 +1745,19 @@ section {
     border-radius: var(--radius-xl);
     border: 1px solid var(--border);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.vision-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(225, 29, 72, 0.05), transparent);
+    animation: shimmer 3s ease-in-out infinite;
 }
 
 .vision-box .subsection-title {
@@ -1672,6 +1884,223 @@ section {
 }
 
 /* ============================================
+   Use Cases Section
+   ============================================ */
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.use-case-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.use-case-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.use-case-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: var(--primary);
+}
+
+.use-case-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.use-case-card p {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.use-case-desc {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   Jobs Section
+   ============================================ */
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.job-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.job-type {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--primary-light);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.job-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.job-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+.job-apply {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.job-apply:hover {
+    color: var(--primary-dark);
+}
+
+/* ============================================
+   Investor Contact Section
+   ============================================ */
+.contact-investor {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.investor-card {
+    background: linear-gradient(135deg, white 0%, var(--bg-light) 100%);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    position: relative;
+}
+
+.investor-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+}
+
+.investor-content {
+    padding: 3rem;
+    text-align: center;
+}
+
+.investor-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.investor-content > p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.investor-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+}
+
+.highlight-item {
+    text-align: center;
+}
+
+.highlight-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.highlight-value {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.investor-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3);
+}
+
+.investor-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(225, 29, 72, 0.4);
+}
+
+/* ============================================
    Responsive Design
    ============================================ */
 @media (max-width: 1024px) {
@@ -1680,13 +2109,20 @@ section {
     .drivers-grid,
     .solutions-grid,
     .programs-grid,
-    .tech-grid {
+    .tech-grid,
+    .use-cases-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .milestones-grid,
-    .programs-stats {
+    .programs-stats,
+    .jobs-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .investor-highlights {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .pillars-grid {
@@ -1733,7 +2169,9 @@ section {
     .programs-stats,
     .team-grid,
     .contact-grid,
-    .contact-cards {
+    .contact-cards,
+    .use-cases-grid,
+    .jobs-grid {
         grid-template-columns: 1fr;
     }
 

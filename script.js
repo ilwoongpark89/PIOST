@@ -37,10 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Why Carnot
             whyCarnotTitle: "Why Carnot Battery?",
-            carnotExplain: "From Heat Storage to Power Generation",
-            carnotExplainDesc: "A Carnot Battery is a thermal energy storage system that can convert stored heat back into electricity. It works in three stages: (1) Charge—convert excess electricity into high-temperature heat using resistance heaters or heat pumps; (2) Store—retain the thermal energy in solid media like rock at temperatures up to 1,000°C; (3) Discharge—generate electricity through a steam turbine or other heat engine when needed.",
+            carnotWhat: "What is a Carnot Battery?",
+            carnotWhatDesc1: "A Carnot Battery is an advanced energy storage system that converts electricity to heat for storage, then converts that heat back to electricity when needed. Named after the French physicist Sadi Carnot who established the theoretical limits of heat engine efficiency, this technology represents the cutting edge of thermal energy storage.",
+            carnotWhatDesc2: "The process works in three stages: First, excess electricity (typically from renewable sources) powers electric heaters to raise the temperature of a thermal storage medium to very high temperatures—in our case, exceeding 1,000°C. Second, this thermal energy is retained in insulated storage tanks with minimal loss. Third, when electricity is needed, the stored heat generates steam that drives a turbine to produce power.",
             carnotAdvantage: "Advantages Over Alternatives",
-            carnotAdvantageDesc: "Carnot Batteries offer a unique combination of long duration (8–24+ hours), low cost ($50–150/kWh vs. $200–400 for lithium-ion), scalability to GWh levels, and the ability to provide both electricity and heat. They're ideal for replacing fossil fuel peaker plants and enabling 100% renewable grids.",
+            carnotAdvantageDesc1: "Lithium-ion batteries dominate short-duration storage (2–4 hours) but become prohibitively expensive for longer durations. Pumped hydro offers long duration but requires specific geography. Carnot Batteries fill this gap: cost-effective storage for 8–24+ hours using widely available materials and proven industrial components.",
+            carnotAdvantageDesc2: "The economics are compelling. Thermal storage costs 10–20x less per kWh than batteries at high temperatures. Modern Carnot Battery systems achieve 50–70% round-trip efficiency—competitive with other technologies when considering total system costs and lifespan.",
 
             // Market
             marketLabel: "Market Opportunity",
@@ -116,10 +118,10 @@ document.addEventListener('DOMContentLoaded', function() {
             phase2Items: ["Deploy commercial-scale pilot systems in Mongolia and Europe", "Obtain CE marking and international product certifications", "Apply to Horizon Europe, EIC Accelerator, and KOICA programs", "Establish strategic partnerships with European energy companies", "Raise Series A funding for manufacturing scale-up"],
             year2029: "2029-30",
             phase3Title: "Commercial Scale & Expansion",
-            phase3Items: ["Establish manufacturing facility for volume production", "Launch Heating-as-a-Service (HaaS) subscription model", "Expand to Northern and Central European markets", "Develop utility-scale Carnot Battery systems for grid storage", "Target break-even and path to profitability"],
+            phase3Items: ["Launch Heating-as-a-Service (HaaS) subscription model", "Establish local manufacturing in Mongolia", "Expand exports to Central Asia", "Participate in Korean public sector projects", "Target break-even and path to profitability"],
             year2031: "2031+",
-            phase4Title: "Global Leadership",
-            phase4Items: ["Become a leading Carnot Battery solution provider globally", "Expand to Asia-Pacific and North American markets", "Develop next-generation ultra-high-temperature systems", "Contribute to global net-zero energy transition goals"],
+            phase4Title: "Market Expansion",
+            phase4Items: ["Deploy systems in large Korean residential complexes", "Expand to Kazakhstan, Kyrgyzstan, and broader Central Asia", "Deploy grid-scale Carnot Battery systems", "Build energy independence ecosystem"],
 
             // Track Record
             trackRecordTitle: "Track Record",
@@ -202,196 +204,198 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         kr: {
             // Hero
-            heroLabel: "열에너지 저장 및 활용 기술",
-            heroLine1: "열로 여는",
-            heroLine2: "탄소중립 시대",
+            heroLabel: "열에너지 저장 스타트업",
+            heroLine1: "화석연료 없이도 따뜻한 겨울,",
+            heroLine2: "이제 현실이 됩니다",
             heroLine3: "",
-            heroDesc: "PIOST는 잉여 재생에너지를 고온의 열로 저장했다가 필요할 때 전기로 되돌리는 열에너지 저장(TES) 시스템과 카르노 배터리를 개발합니다. 변동성 높은 재생에너지와 안정적인 전력 공급 사이의 간극을 메워, 24시간 끊김 없는 청정에너지 시대를 앞당깁니다.",
-            heroBtn1: "더 알아보기",
-            heroBtn2: "문의하기",
+            heroDesc: "재생전력을 열로 저장하고, 필요할 때 난방과 전기로 공급합니다. 안전하고, 오래가고, 경제적인 에너지 저장—PIOST가 만들어갑니다.",
+            heroBtn1: "기술 알아보기",
+            heroBtn2: "투자 문의",
 
             // About
             aboutLabel: "회사 소개",
-            aboutTitle: "탄소중립을 앞당기는 열에너지 기술",
-            aboutDesc: "PIOST는 2025년 설립된 딥테크 스타트업입니다. 열에너지 저장 및 활용 기술을 통해 탄소중립 실현에 기여하고자 합니다. 남는 재생에너지를 1,000°C 이상의 고온 열로 저장하고, 필요할 때 전기나 열로 다시 꺼내 쓰는 핵심 기술을 개발하고 있습니다.",
-            aboutExtended: "전 세계는 재생에너지 전환이라는 거대한 흐름 속에 있지만, 태양광과 풍력은 본질적으로 간헐적입니다. 해가 지고 바람이 멎으면 전력 공급이 불안정해지고, 결국 화석연료 발전소가 그 빈자리를 메워야 합니다. PIOST는 암석, 모래 등 어디서나 구할 수 있는 저렴한 소재로 열을 저장해 이 문제를 해결합니다. 리튬이온 배터리 대비 훨씬 낮은 비용으로 장시간 에너지를 저장할 수 있는 카르노 배터리 기술로, 24시간 안정적인 청정에너지 공급의 길을 열어갑니다.",
+            aboutTitle: "열로 저장하고, 열로 공급합니다",
+            aboutDesc: "PIOST는 화석연료 보일러를 재생에너지 기반 열저장 시스템으로 대체합니다. 1,000°C 이상 고온 저장, 암석·모래 복합 축열재, 직접 응축 열교환—핵심 기술 모두 자체 특허로 보유하고 있습니다.",
+            aboutExtended: "전 세계 에너지 소비의 절반은 난방입니다. 하지만 대부분은 아직도 석탄과 가스에 의존하죠. PIOST는 어디서나 구할 수 있는 암석과 모래에 열을 저장해 이 문제를 해결합니다. 리튬이온 배터리보다 저렴하고, 30년 넘게 쓸 수 있으며, 화재 위험도 없습니다.",
 
             // Why TES
-            challengeLabel: "우리가 푸는 문제",
-            whyTesTitle: "왜 열에너지 저장인가",
-            whatIsTes: "열에너지 저장(TES)이란?",
-            whatIsTesDesc: "열에너지 저장(TES)은 에너지를 '열'의 형태로 담아두었다가 필요할 때 꺼내 쓰는 기술입니다. 전기를 화학반응으로 저장하는 리튬이온 배터리와 달리, TES는 암석, 모래, 용융염 같은 물질에 수백~수천 도의 열을 축적합니다. 저장된 열은 난방에 직접 활용하거나, 증기터빈을 돌려 전기로 변환할 수 있습니다.",
-            whyTesMatters: "에너지 전환 시대, TES가 답인 이유",
-            whyTesMattersDesc1: "재생에너지 확대의 가장 큰 걸림돌은 '간헐성'입니다. 햇빛이 없는 밤, 바람이 잦아든 순간에는 태양광·풍력 발전량이 급감합니다. 발전량과 수요의 시간대가 어긋나면 남는 전기는 버려지고, 부족할 땐 화석연료 발전소가 가동되어야 합니다.",
-            whyTesMattersDesc2: "TES는 이 간극을 메우는 가장 현실적인 해법입니다. 열은 최소한의 손실로 수 시간에서 며칠까지 저장할 수 있고, 저장 매체인 암석과 모래는 전 세계 어디서나 저렴하게 구할 수 있습니다. 리튬이나 코발트 같은 희소 광물이 필요 없고, 화재나 폭발 위험도 없어 안전합니다.",
-            tesAdvantage: "TES의 경쟁력",
-            tesAdvantageDesc1: "TES 기술은 이미 전 세계 집광형 태양열발전소(CSP)에서 6.5GW 이상 상용화되어 검증된 기술입니다. 핵심 소재인 암석, 모래, 강철은 공급망 리스크 없이 안정적으로 확보할 수 있습니다.",
-            tesAdvantageDesc2: "시스템 수명 30년 이상, 성능 저하 거의 없음. 주거용 난방부터 대규모 전력망 관리까지 다양한 분야에서 리튬이온 배터리 대비 압도적인 총소유비용(TCO) 경쟁력을 갖춥니다.",
+            challengeLabel: "문제 인식",
+            whyTesTitle: "난방, 왜 아직도 화석연료인가요?",
+            whatIsTes: "열에너지 저장이란?",
+            whatIsTesDesc: "재생전력을 고온의 열로 바꿔 암석, 모래 같은 축열재에 저장합니다. 저장된 열은 난방에 쓰거나, 터빈을 돌려 전기로 만들 수 있어요. 리튬이온과 달리 희소 광물이 필요 없고, 불이 날 위험도 없습니다.",
+            whyTesMatters: "난방이 바뀌어야 진짜 에너지 전환입니다",
+            whyTesMattersDesc1: "전 세계 에너지 소비의 약 50%가 난방입니다. 그런데 대부분의 건물과 공장은 아직도 석탄, 가스 보일러를 씁니다. 태양광·풍력이 아무리 늘어나도, 난방이 바뀌지 않으면 의미가 없어요.",
+            whyTesMattersDesc2: "PIOST는 재생전력을 열로 바꿔 저장합니다. 해가 지고 바람이 멎어도 따뜻한 난방을 공급하고, 필요하면 전기까지 생산할 수 있습니다.",
+            tesAdvantage: "PIOST만의 차별점",
+            tesAdvantageDesc1: "암석·모래 복합 축열재, 직접 응축 열교환 방식, 모듈형 설계—모두 자체 특허 기술입니다. 1,000°C 이상 고온 저장과 높은 열효율을 동시에 달성했습니다.",
+            tesAdvantageDesc2: "30년 이상 수명, 리튬이온의 1/10 비용, 화재 위험 제로. 더 안전하고, 더 오래가고, 더 경제적인 에너지 저장의 새로운 기준입니다.",
 
             // Why Carnot
-            whyCarnotTitle: "왜 카르노 배터리인가",
-            carnotExplain: "저장한 열을 다시 전기로",
-            carnotExplainDesc: "카르노 배터리는 열 저장과 발전을 결합한 시스템입니다. ① 충전: 잉여 전기를 저항히터나 히트펌프로 고온의 열로 변환 ② 저장: 암석 등 고체 매체에 최대 1,000°C 이상의 열을 보관 ③ 방전: 필요할 때 증기터빈을 돌려 전기를 생산. 열과 전기, 두 가지 형태로 에너지를 공급할 수 있어 활용도가 높습니다.",
-            carnotAdvantage: "기존 기술 대비 장점",
-            carnotAdvantageDesc: "카르노 배터리는 8~24시간 이상의 장주기 저장이 가능하면서도, kWh당 $50~150 수준의 낮은 비용을 실현합니다(리튬이온 $200~400 대비). GWh급 대용량 확장이 용이하고, 전기와 열을 동시에 공급할 수 있어 화석연료 피크발전소 대체와 100% 재생에너지 전력망 구현에 최적입니다.",
+            whyCarnotTitle: "카르노 배터리가 뭔가요?",
+            carnotWhat: "카르노 배터리란?",
+            carnotWhatDesc1: "카르노 배터리는 전기를 열로 바꿔 저장했다가, 다시 전기로 되돌리는 에너지 저장 시스템입니다. 열기관 효율의 이론적 한계를 정립한 프랑스 물리학자 사디 카르노의 이름을 따왔습니다.",
+            carnotWhatDesc2: "작동 원리는 3단계입니다. ① 잉여 재생전력으로 축열재를 1,000°C 이상 고온으로 가열 ② 단열 처리된 저장조에 열 보관 ③ 필요할 때 저장된 열로 증기를 만들어 터빈을 돌려 전기 생산.",
+            carnotAdvantage: "왜 리튬이온 대신 카르노 배터리인가요?",
+            carnotAdvantageDesc1: "리튬이온 배터리는 2~4시간 단주기 저장에는 강하지만, 그 이상은 비용이 급격히 올라갑니다. 양수발전은 장주기 저장이 가능하지만 지형 제약이 큽니다. 카르노 배터리는 이 빈틈을 채웁니다—8~24시간 이상 저장이 가능하면서, 어디서나 구할 수 있는 소재와 검증된 산업 부품을 사용합니다.",
+            carnotAdvantageDesc2: "경제성은 압도적입니다. 고온 열저장 비용은 리튬이온 배터리 대비 kWh당 10~20배 저렴합니다. 최신 카르노 배터리 시스템의 왕복 효율은 50~70%로, 전체 시스템 비용과 수명을 고려하면 다른 기술과 충분히 경쟁할 수 있습니다.",
 
             // Market
             marketLabel: "시장 기회",
-            marketTitle: "급성장하는 에너지 저장 시장",
-            marketDesc: "2050 탄소중립 달성을 위해 전 세계 에너지 저장 용량은 지금의 수십 배로 늘어나야 합니다. 장주기 저장 분야에서 열에너지 저장은 가장 경제적인 솔루션으로 주목받고 있습니다.",
-            stat1Value: "500",
-            stat1Label: "2030년 시장 규모",
-            stat1Desc: "글로벌 열에너지 저장 시장, 연간 5,000억 달러 이상 전망",
-            stat1Source: "출처: IEA 세계에너지전망 2024",
-            stat2Value: "3",
-            stat2Label: "배 성장률",
-            stat2Desc: "에너지 저장 시장, 재생에너지 발전 대비 3배 빠른 성장세",
-            stat2Source: "출처: BloombergNEF 2024",
-            stat3Value: "70",
-            stat3Label: "% 비용 절감",
-            stat3Desc: "8시간 이상 저장 시 TES는 리튬이온 대비 균등화저장비용(LCOS) 70% 절감 가능",
-            stat3Source: "출처: NREL 비용 전망 2024",
-            driversTitle: "시장을 움직이는 힘",
-            driver1Title: "글로벌 탄소중립 선언",
-            driver1Desc: "전 세계 150개국 이상이 2050년 넷제로를 약속. 대규모 에너지 저장 인프라 확충 필수",
-            driver2Title: "재생에너지 잉여 전력 급증",
-            driver2Desc: "태양광·풍력 설비 과잉으로 버려지는 전력 증가. 장주기 저장 수요 폭발적 성장",
-            driver3Title: "전력망 고도화 요구",
-            driver3Desc: "노후 인프라 교체, 전기차·데이터센터 등 전력 수요 급증으로 유연한 저장 솔루션 필요",
+            marketTitle: "2030년, 1조 달러 시장이 열립니다",
+            marketDesc: "에너지 저장 시장은 폭발적으로 성장 중입니다. 그중에서도 난방 탈탄소화가 가장 큰 기회입니다.",
+            stat1Value: "1",
+            stat1Label: "조 달러",
+            stat1Desc: "2030년 글로벌 에너지 저장 시장 규모",
+            stat1Source: "맥킨지",
+            stat2Value: "30",
+            stat2Label: "%",
+            stat2Desc: "국내 에너지 소비 중 난방 비중",
+            stat2Source: "한국에너지경제연구원",
+            stat3Value: "80",
+            stat3Label: "%",
+            stat3Desc: "몽골의 화석연료 의존 비율",
+            stat3Source: "몽골 에너지부",
+            driversTitle: "왜 몽골부터 시작하나요?",
+            driver1Title: "극한의 난방 수요",
+            driver1Desc: "겨울 평균 -25°C, 연간 8개월 난방 필수. 전 세계에서 가장 춥고, 가장 난방이 절실한 곳입니다.",
+            driver2Title: "석탄 난방의 비극",
+            driver2Desc: "아이들 90%가 대기오염으로 건강 피해를 입고 있습니다. 시위가 빈번할 만큼 사회적 전환 요구가 큽니다.",
+            driver3Title: "재생에너지의 보고",
+            driver3Desc: "태양광 2,200GW, 풍력 1,100GW 잠재량. 재생전력 기반 청정 난방의 최적지입니다.",
 
             // Technology Comparison
-            comparisonTitle: "기술 비교",
-            comparisonDesc: "주요 열에너지 저장 기업과 PIOST의 기술 비교",
+            comparisonTitle: "경쟁사 대비 기술 비교",
+            comparisonDesc: "PIOST는 어떻게 다른가요?",
 
             // Applications
-            applicationsTitle: "적용 분야",
-            applicationsDesc: "PIOST 기술이 만드는 변화",
-            app1Title: "지역난방",
-            app1Region: "한랭 기후 지역",
-            app1Desc: "재생에너지로 저장한 열을 활용해 주거·상업 건물에 24시간 청정 난방 공급",
+            applicationsTitle: "어디에 쓰이나요?",
+            applicationsDesc: "화석연료를 대체하는 다양한 적용처",
+            app1Title: "주거·상업 난방",
+            app1Region: "석탄·가스 보일러 대체",
+            app1Desc: "몽골 게르부터 고층 빌딩까지. 재생전력으로 24시간 따뜻한 난방을 공급합니다.",
             app2Title: "산업 공정열",
-            app2Region: "탈탄소 난제 업종",
-            app2Desc: "철강, 시멘트, 화학 등 고온(500~1,000°C) 공정열이 필요한 산업의 탈탄소화 지원",
-            app3Title: "재생에너지 출력 안정화",
+            app2Region: "500~1,000°C 고온 공정",
+            app2Desc: "철강, 시멘트, 화학 산업의 탈탄소화를 지원합니다.",
+            app3Title: "재생에너지 안정화",
             app3Region: "태양광·풍력 연계",
-            app3Desc: "남는 발전량을 저장했다가 피크 시간대에 방전. 재생에너지 이용률 극대화",
-            app4Title: "전력망 장주기 저장",
-            app4Region: "8~24시간 이상",
-            app4Desc: "대규모 에너지 저장으로 전력 수급 균형. 화석연료 피크발전소 대체",
+            app3Desc: "남는 전기를 저장하고, 필요할 때 꺼내 씁니다. 재생에너지 이용률을 극대화합니다.",
+            app4Title: "전력 생산",
+            app4Region: "카르노 배터리",
+            app4Desc: "저장된 열로 터빈을 돌려 전기를 만듭니다. 피크 수요 대응에 최적입니다.",
 
             // Solutions
-            solutionsLabel: "우리의 접근법",
-            strategyTitle: "기술 전략",
-            strategyDesc: "PIOST는 검증된 열 저장 원리에 독자적인 고효율 열교환 기술을 접목합니다.",
+            solutionsLabel: "솔루션",
+            strategyTitle: "PIOST의 기술 전략",
+            strategyDesc: "검증된 열 저장 원리에 독자적인 고효율 열교환 기술을 더했습니다.",
 
             // Milestones
-            milestonesTitle: "탄탄한 기술적 기반",
-            milestone1Title: "깊이 있는 연구 역량",
-            milestone1Desc: "증기 생성, 이상(二相) 유동, 고온 열시스템 분야에서 축적된 연구 경험",
-            milestone2Title: "12건 이상 특허 출원",
-            milestone2Desc: "핵심 열에너지 저장 및 열교환 기술 관련 국내외 특허 포트폴리오 구축",
-            milestone3Title: "글로벌 실증 파트너십",
-            milestone3Desc: "극한 한랭 기후에서 기술을 검증할 몽골 현지 테스트베드 MOU 체결",
-            milestone4Title: "대학 연구실 스핀오프",
-            milestone4Desc: "인하대학교 MFTEL(다상유동·열공학연구실)의 10년 이상 연구 성과를 기반으로 창업",
-            visitLab: "MFTEL 연구실 보기",
+            milestonesTitle: "기술력의 근거",
+            milestone1Title: "핵심 기술 전부 특허 보유",
+            milestone1Desc: "암석·모래 복합 축열재, 직접 응축 열교환, 모듈형 설계—모두 자체 특허입니다.",
+            milestone2Title: "12건 이상 특허 포트폴리오",
+            milestone2Desc: "열저장, 열교환, 시스템 설계 전 영역에 걸쳐 국내외 IP를 확보했습니다.",
+            milestone3Title: "몽골 현지 파트너 확보",
+            milestone3Desc: "YN E Tulga사와 MOU 체결. -25°C 극한 환경에서 기술을 검증합니다.",
+            milestone4Title: "10년 연구 성과 기반 창업",
+            milestone4Desc: "인하대학교 MFTEL(다상유동·열공학연구실)에서 스핀오프했습니다.",
+            visitLab: "연구실 둘러보기",
 
             // Roadmap
             roadmapLabel: "로드맵",
-            roadmapTitle: "시장 진출 로드맵",
-            roadmapDesc: "기술 검증부터 글로벌 상용화까지, 단계별 성장 전략",
+            roadmapTitle: "몽골에서 시작해, 세계로 확장합니다",
+            roadmapDesc: "기술 실증부터 글로벌 상용화까지, 단계별 성장 전략입니다.",
             year2026: "2026",
-            now: "현재",
-            phase1Title: "기술 검증 및 시드 투자 유치",
-            phase1Items: ["TES 프로토타입 개발 및 실험실 규모 실증 완료", "핵심 기술(1,000°C급 저장, 하이브리드 증기 생성) 성능 검증", "몽골 한랭 기후 실증 프로젝트 착수", "시드 투자 유치 및 액셀러레이터 프로그램 참여", "PCT 국제특허 출원으로 글로벌 IP 확보"],
+            now: "지금",
+            phase1Title: "기술 실증 단계",
+            phase1Items: ["몽골 게르 난방 실증 착수", "-25°C 극한 환경에서 기술 검증", "제품 인증 및 수출 인허가 취득", "시드 투자 유치", "PCT 국제특허 출원"],
             year2027: "2027-28",
-            phase2Title: "파일럿 구축 및 시리즈 A",
-            phase2Items: ["몽골, 유럽 등에 상용 규모 파일럿 시스템 설치·운영", "CE 인증 등 국제 제품 인증 획득", "Horizon Europe, EIC Accelerator, KOICA 등 글로벌 프로그램 참여", "유럽 에너지 기업과 전략적 파트너십 체결", "시리즈 A 투자 유치로 양산 체제 준비"],
+            phase2Title: "매출 발생 단계",
+            phase2Items: ["모듈형 제품 판매 시작", "유지보수(O&M) 서비스 런칭", "몽골 정부 대상 B2G 진입", "KOICA, Horizon Europe 펀딩 확보", "시리즈 A 투자 유치"],
             year2029: "2029-30",
-            phase3Title: "본격 상용화 및 시장 확대",
-            phase3Items: ["양산 설비 구축 및 제조 원가 절감", "Heating-as-a-Service(HaaS) 구독형 비즈니스 모델 출시", "북유럽, 중앙유럽 시장 본격 진출", "전력망급 대용량 카르노 배터리 시스템 개발", "손익분기점 달성 및 흑자 전환"],
+            phase3Title: "스케일업 단계",
+            phase3Items: ["월 구독형 HaaS 모델 출시", "몽골 현지 생산라인 구축", "중앙아시아 수출 확대", "국내 공공 프로젝트 참여", "손익분기점 달성"],
             year2031: "2031+",
-            phase4Title: "글로벌 리더로 도약",
-            phase4Items: ["카르노 배터리 분야 글로벌 선도 기업으로 자리매김", "아시아태평양, 북미 시장 진출", "차세대 초고온 저장 시스템 개발", "전 세계 탄소중립 달성에 실질적 기여"],
+            phase4Title: "시장 확장",
+            phase4Items: ["국내 대단지 거주지역 시스템 적용", "카자흐스탄·키르기스스탄 등 중앙아시아 본격 진출", "전력망급 카르노 배터리 공급", "에너지 자립 생태계 구축"],
 
             // Track Record
-            trackRecordTitle: "지금까지의 발자취",
-            bizDev: "사업화 지원",
+            trackRecordTitle: "지금까지 이만큼 해왔습니다",
+            bizDev: "사업화",
             program1Name: "청년창업사관학교",
-            program1Desc: "사업계획 수립 및 법인 설립 완료",
-            program2Name: "연구실 창업 지원 사업",
-            program2Desc: "대학 연구 성과 사업화 프로그램 선정",
-            program3Name: "IP R&D 전략 컨설팅",
-            program3Desc: "특허 포트폴리오 전략 수립",
-            investFunding: "투자·펀딩",
+            program1Desc: "사업계획 수립 및 법인 설립",
+            program2Name: "연구실 창업 지원",
+            program2Desc: "대학 연구 성과 사업화",
+            program3Name: "IP R&D 컨설팅",
+            program3Desc: "특허 전략 수립",
+            investFunding: "투자 유치",
             program4Name: "TIPS 프로그램",
-            program4Desc: "민간 VC 연계 정부 R&D 지원 프로그램",
+            program4Desc: "정부 R&D 지원 프로그램",
             program5Name: "TIPS 챌린지",
-            program5Desc: "투자 피칭 경진대회 본선 진출",
+            program5Desc: "피칭 경진대회 본선",
             program6Name: "IR 활동",
-            program6Desc: "국내외 투자자 대상 정기 IR 진행",
-            globalExpansion: "글로벌 협력",
-            program7Name: "글래디에이터 - 몽골",
-            program7Desc: "YN E Tulga사와 현지 사업 협력 MOU",
+            program6Desc: "투자자 대상 정기 IR",
+            globalExpansion: "글로벌",
+            program7Name: "글래디에이터",
+            program7Desc: "몽골 현지 MOU 체결",
             program8Name: "픽팩 파트너십",
-            program8Desc: "2025 글로벌 R&D 크리에이터 선정",
+            program8Desc: "글로벌 R&D 크리에이터",
             program9Name: "KOMIR 협력",
-            program9Desc: "몽골 에너지 분야 전략적 파트너십",
+            program9Desc: "몽골 전략 파트너십",
             founded: "법인 설립",
             startupPrograms: "창업 프로그램",
-            mentoringSessions: "멘토링 세션",
+            mentoringSessions: "멘토링",
             intlPartners: "해외 파트너",
             patentApps: "특허 출원",
 
             // Team
-            teamLabel: "팀 소개",
+            teamLabel: "팀",
             teamTitle: "함께 만드는 사람들",
-            teamDesc: "사업 전략과 열공학 기술, 두 축의 전문성을 결합한 창업팀",
+            teamDesc: "사업 전략과 열공학 기술, 두 축의 전문성을 갖춘 창업팀입니다.",
             ceoName: "송준범",
-            ceoTitle: "CEO & 공동창업자",
-            ceoRole: "시장 분석, 사업 전략 수립",
+            ceoTitle: "대표이사",
+            ceoRole: "시장 분석 · 사업 전략",
             ctoName: "박일웅",
-            ctoTitle: "CTO & 공동창업자",
-            ctoRole: "R&D 총괄, 핵심 기술 개발",
-            missionTitle: "우리가 이 일을 하는 이유",
-            missionDesc: "해가 질 때도, 바람이 멎을 때도 청정에너지가 끊기지 않는 세상. 우리는 그 세상을 만들기 위해 모였습니다. 재생에너지 100% 전력망을 현실로 만들어, 탈탄소화가 누구에게나 가능한 선택이 되도록 하겠습니다.",
+            ctoTitle: "기술이사",
+            ctoRole: "R&D 총괄 · 기술 개발",
+            missionTitle: "왜 이 일을 하나요?",
+            missionDesc: "몽골 아이들 90%가 석탄 난방 때문에 아픕니다. 화석연료 없이도 따뜻한 겨울을 보낼 수 있다면—그게 우리가 만들고 싶은 미래입니다.",
             goal1Value: "2050",
-            goal1Label: "넷제로 실현",
+            goal1Label: "넷제로",
             goal2Value: "24/7",
-            goal2Label: "무중단 청정에너지",
+            goal2Label: "청정에너지",
             goal3Value: "100%",
-            goal3Label: "재생에너지 전력망",
-            joinUsTitle: "함께할 동료를 찾습니다",
-            joinUsDesc: "탄소중립 시대를 여는 여정에 함께하세요",
+            goal3Label: "재생에너지",
+            joinUsTitle: "함께할 분을 찾습니다",
+            joinUsDesc: "화석연료 없는 따뜻한 세상, 같이 만들어갈 동료를 기다립니다.",
             job1Type: "엔지니어링",
             job1Title: "열시스템 엔지니어",
-            job1Desc: "고온 열저장 시스템 설계 및 최적화. 열전달, 전산유체역학(CFD) 경험자 우대",
+            job1Desc: "고온 열저장 시스템 설계. 열전달·CFD 경험자 우대",
             job2Type: "엔지니어링",
-            job2Title: "제어·시뮬레이션 엔지니어",
-            job2Desc: "디지털 트윈, AI 기반 운영 최적화 시스템 개발",
+            job2Title: "제어·시뮬레이션",
+            job2Desc: "디지털 트윈 및 AI 기반 운영 최적화",
             job3Type: "사업개발",
-            job3Title: "비즈니스 개발 담당",
-            job3Desc: "유럽·아시아 시장 개척 및 파트너십 구축. 에너지 업계 경험자 우대",
+            job3Title: "비즈니스 개발",
+            job3Desc: "몽골·중앙아시아 시장 개척",
             applyNow: "지원하기",
 
             // Contact
-            contactLabel: "투자자 여러분께",
+            contactLabel: "투자 문의",
             contactTitle: "함께 성장할 파트너를 찾습니다",
-            contactDesc: "PIOST와 함께 탄소중립 시대를 열어갈 투자자, 파트너사의 연락을 기다립니다.",
-            investorTitle: "투자 및 파트너십 문의",
-            investorDesc: "PIOST는 프로토타입 고도화와 해외 파일럿 구축을 위한 시드 투자를 유치하고 있습니다. 열에너지 저장 시장의 성장 가능성에 관심 있는 투자자, 전략적 파트너, 에너지 기업의 연락을 환영합니다.",
-            stageLabel: "투자 단계",
+            contactDesc: "2030년 1조 달러 시장, PIOST와 함께 선점하세요.",
+            investorTitle: "투자 및 파트너십",
+            investorDesc: "몽골 실증과 제품 상용화를 위한 시드 투자를 유치하고 있습니다. 청정 난방 시장에 관심 있는 투자자, 파트너의 연락을 환영합니다.",
+            stageLabel: "단계",
             stageValue: "프리시드 / 시드",
-            focusLabel: "현재 집중",
-            focusValue: "프로토타입 · 파일럿",
-            marketLabel2: "목표 시장",
-            marketValue: "한국 · 아시아",
+            focusLabel: "집중",
+            focusValue: "몽골 실증 · 제품화",
+            marketLabel2: "시장",
+            marketValue: "몽골 · 중앙아시아",
             contactUs: "연락하기",
-            location: "인천광역시, 대한민국",
+            location: "인천, 대한민국",
 
             // Footer
-            footerTagline: "열에너지 저장 기술로 지속가능한 미래를 만듭니다",
-            copyright: "© 2025 PIOST Inc. All rights reserved."
+            footerTagline: "안전하고, 오래가고, 경제적인 에너지 저장의 미래",
+            copyright: "© 2025 ㈜피오스트. All rights reserved."
         }
     };
 
@@ -407,18 +411,19 @@ document.addEventListener('DOMContentLoaded', function() {
             el.textContent = el.dataset[lang];
         });
 
-        // Update all translatable elements
+        // Helper functions
         const updateText = (selector, key) => {
             const el = document.querySelector(selector);
             if (el && t[key]) el.textContent = t[key];
         };
 
-        const updateHTML = (selector, key) => {
-            const el = document.querySelector(selector);
-            if (el && t[key]) el.innerHTML = t[key];
+        const updateAll = (selector, texts) => {
+            document.querySelectorAll(selector).forEach((el, i) => {
+                if (texts[i]) el.textContent = texts[i];
+            });
         };
 
-        // Hero
+        // ===== HERO =====
         updateText('.hero-label', 'heroLabel');
         const heroLines = document.querySelectorAll('.hero-line');
         if (heroLines[0]) heroLines[0].textContent = t.heroLine1;
@@ -429,58 +434,423 @@ document.addEventListener('DOMContentLoaded', function() {
         if (heroButtons[0]) heroButtons[0].textContent = t.heroBtn1;
         if (heroButtons[1]) heroButtons[1].textContent = t.heroBtn2;
 
-        // About
+        // ===== ABOUT =====
         updateText('#about .section-label', 'aboutLabel');
         updateText('#about .section-title', 'aboutTitle');
         updateText('#about .section-description', 'aboutDesc');
         updateText('.about-content-extended p', 'aboutExtended');
 
-        // Why TES
+        // ===== WHY TES =====
         updateText('#why-tes .section-label', 'challengeLabel');
-        updateText('#why-tes .subsection-title', 'whyTesTitle');
-        const whyExplanation = document.querySelectorAll('.why-explanation h3');
-        const whyExplanationP = document.querySelectorAll('.why-explanation p');
-        if (whyExplanation[0]) whyExplanation[0].textContent = t.whatIsTes;
-        if (whyExplanationP[0]) whyExplanationP[0].textContent = t.whatIsTesDesc;
-        if (whyExplanation[1]) whyExplanation[1].textContent = t.whyTesMatters;
-        if (whyExplanationP[1]) whyExplanationP[1].textContent = t.whyTesMattersDesc1;
-        if (whyExplanationP[2]) whyExplanationP[2].textContent = t.whyTesMattersDesc2;
-        updateText('.hope-card h4', 'tesAdvantage');
-        const hopeP = document.querySelectorAll('.hope-card p');
-        if (hopeP[0]) hopeP[0].textContent = t.tesAdvantageDesc1;
-        if (hopeP[1]) hopeP[1].textContent = t.tesAdvantageDesc2;
+        const whyTesSubtitles = document.querySelectorAll('#why-tes .subsection-title');
+        if (whyTesSubtitles[0]) whyTesSubtitles[0].textContent = t.whyTesTitle;
+        if (whyTesSubtitles[1]) whyTesSubtitles[1].textContent = t.whyCarnotTitle;
 
-        // Market
+        const whyContents = document.querySelectorAll('#why-tes .why-content');
+        // First why-content (TES)
+        if (whyContents[0]) {
+            const h3s = whyContents[0].querySelectorAll('.why-explanation h3');
+            const ps = whyContents[0].querySelectorAll('.why-explanation p');
+            if (h3s[0]) h3s[0].textContent = t.whatIsTes;
+            if (ps[0]) ps[0].textContent = t.whatIsTesDesc;
+            if (h3s[1]) h3s[1].textContent = t.whyTesMatters;
+            if (ps[1]) ps[1].textContent = t.whyTesMattersDesc1;
+            if (ps[2]) ps[2].textContent = t.whyTesMattersDesc2;
+            const hope = whyContents[0].querySelector('.hope-card');
+            if (hope) {
+                const h4 = hope.querySelector('h4');
+                const hopePs = hope.querySelectorAll('p');
+                if (h4) h4.textContent = t.tesAdvantage;
+                if (hopePs[0]) hopePs[0].textContent = t.tesAdvantageDesc1;
+                if (hopePs[1]) hopePs[1].textContent = t.tesAdvantageDesc2;
+            }
+        }
+        // Second why-content (Carnot)
+        if (whyContents[1]) {
+            const h3s = whyContents[1].querySelectorAll('.why-explanation h3');
+            const ps = whyContents[1].querySelectorAll('.why-explanation p');
+            if (h3s[0]) h3s[0].textContent = t.carnotWhat;
+            if (ps[0]) ps[0].textContent = t.carnotWhatDesc1;
+            if (ps[1]) ps[1].textContent = t.carnotWhatDesc2;
+            if (h3s[1]) h3s[1].textContent = t.carnotAdvantage;
+            if (ps[2]) ps[2].textContent = t.carnotAdvantageDesc1;
+            if (ps[3]) ps[3].textContent = t.carnotAdvantageDesc2;
+            const hope = whyContents[1].querySelector('.hope-card');
+            if (hope) {
+                const h4 = hope.querySelector('h4');
+                const hopePs = hope.querySelectorAll('p');
+                if (h4) h4.textContent = t.driversTitle;
+                if (hopePs[0]) hopePs[0].textContent = t.driver1Title + ': ' + t.driver1Desc;
+                if (hopePs[1]) hopePs[1].textContent = t.driver2Title + ': ' + t.driver2Desc;
+            }
+        }
+
+        // ===== MARKET =====
         updateText('#market .section-label', 'marketLabel');
         updateText('#market .section-title', 'marketTitle');
         updateText('#market .section-description', 'marketDesc');
 
-        // Applications
-        const appSection = document.querySelector('#market');
-        if (appSection) {
-            const appTitle = appSection.querySelectorAll('.subsection-title')[1];
-            if (appTitle) appTitle.textContent = t.applicationsTitle;
+        // Market stats - update all 6 stat cards
+        const statCards = document.querySelectorAll('#market .stat-card');
+        const statData = lang === 'kr' ? [
+            { num: '1', unit: '조 달러', label: '시장 규모', desc: '2030년 글로벌 에너지 저장 시장 규모', src: '맥킨지' },
+            { num: '30', unit: '%', label: '난방 비중', desc: '국내 최종에너지 소비 중 난방 비율', src: '한국에너지경제연구원' },
+            { num: '80', unit: '%', label: '화석연료 의존', desc: '몽골 에너지원 중 화석연료 비중', src: '몽골 에너지부' },
+            { num: '2,200', unit: 'GW', label: '태양광 잠재량', desc: '몽골의 태양광 발전 잠재량', src: '' },
+            { num: '90', unit: '%', label: '아동 건강피해', desc: '대기오염으로 건강 피해를 입는 몽골 아동', src: '' },
+            { num: '-25', unit: '°C', label: '겨울 평균기온', desc: '몽골 겨울철 평균 기온', src: '' }
+        ] : [
+            { num: '10', unit: 'x', label: 'Market Growth', desc: 'Global TES market projected to grow more than tenfold by 2035', src: 'McKinsey' },
+            { num: '670', unit: 'GW', label: 'PV Capacity in Europe', desc: 'Photovoltaic capacity projected to reach 670GW by 2028', src: 'European Environment Agency' },
+            { num: '49', unit: '%', label: 'Energy for Heating', desc: 'Heat accounts for nearly half of global energy demand', src: 'International Energy Agency' },
+            { num: '1,500', unit: 'GW', label: 'Storage Target 2030', desc: 'Global energy storage capacity target to achieve 6x growth by 2030', src: 'COP28 Global Stocktake' },
+            { num: '11.7', unit: '%', label: 'TES CAGR', desc: 'TES market expected to reach $10.9B by 2030', src: 'Grand View Research' },
+            { num: '6.5', unit: 'GW', label: 'Global CSP Capacity', desc: 'Total installed concentrated solar power capacity in 2022', src: 'IRENA' }
+        ];
+        statCards.forEach((card, i) => {
+            if (statData[i]) {
+                const numEl = card.querySelector('.stat-number');
+                const labelEl = card.querySelector('.stat-label');
+                const descEl = card.querySelector('p');
+                const srcEl = card.querySelector('.stat-source');
+                if (numEl) numEl.innerHTML = statData[i].num + '<span class="stat-unit">' + statData[i].unit + '</span>';
+                if (labelEl) labelEl.textContent = statData[i].label;
+                if (descEl) descEl.textContent = statData[i].desc;
+                if (srcEl) srcEl.textContent = statData[i].src;
+            }
+        });
+
+        // Technology Comparison Table
+        const compTable = document.querySelector('.comparison-table');
+        if (compTable) {
+            const ths = compTable.querySelectorAll('thead th');
+            const thData = lang === 'kr' ? ['구분', '경쟁사 A', '경쟁사 B', '경쟁사 C', 'PIOST'] : ['Category', 'Company A', 'Company B', 'Company C', 'PIOST Inc.'];
+            ths.forEach((th, i) => { if (thData[i]) th.textContent = thData[i]; });
+
+            const rows = compTable.querySelectorAll('tbody tr');
+            const rowData = lang === 'kr' ? [
+                ['최고 온도', '750°C', '450°C', '600-800°C', '1,000°C+'],
+                ['축열재', '파쇄 암석', '콘크리트', '화산암', '암석·모래 복합'],
+                ['열교환 방식', '저항 가열', '튜브 열교환기', '열풍 순환', '직접 응축 & 이중관'],
+                ['시스템 유형', '모듈형', '모듈형', '플랜트형', '모듈형']
+            ] : [
+                ['Max Temperature', '750°C', '450°C', '600-800°C', '1,000°C+'],
+                ['Storage Material', 'Crushed rocks', 'Concrete (HEATCRETE)', 'Volcanic rocks', 'Composite rock & sand'],
+                ['Heat Transfer', 'Resistive heating', 'Tube heat exchanger', 'Hot air circulation', 'Direct quenching & tube-in-tube'],
+                ['System Type', 'Modular', 'Modular', 'Plant-scale', 'Modular']
+            ];
+            rows.forEach((row, i) => {
+                if (rowData[i]) {
+                    const tds = row.querySelectorAll('td');
+                    tds.forEach((td, j) => {
+                        if (rowData[i][j]) {
+                            if (j === 0 || j === 4) {
+                                td.innerHTML = '<strong>' + rowData[i][j] + '</strong>';
+                            } else {
+                                td.textContent = rowData[i][j];
+                            }
+                        }
+                    });
+                }
+            });
         }
 
-        // Team Mission
+        // Technology Comparison
+        const compTitle = document.querySelectorAll('#market .subsection-title')[0];
+        const compDesc = document.querySelectorAll('#market .section-description')[1];
+        if (compTitle) compTitle.textContent = t.comparisonTitle;
+        if (compDesc) compDesc.textContent = t.comparisonDesc;
+
+        // Applications
+        const appTitle = document.querySelectorAll('#market .subsection-title')[1];
+        const appDesc = document.querySelectorAll('#market .section-description')[2];
+        if (appTitle) appTitle.textContent = t.applicationsTitle;
+        if (appDesc) appDesc.textContent = t.applicationsDesc;
+
+        const useCaseCards = document.querySelectorAll('.use-case-card');
+        const appData = [
+            { title: t.app1Title, region: t.app1Region, desc: t.app1Desc },
+            { title: t.app2Title, region: t.app2Region, desc: t.app2Desc },
+            { title: t.app3Title, region: t.app3Region, desc: t.app3Desc },
+            { title: t.app4Title, region: t.app4Region, desc: t.app4Desc }
+        ];
+        useCaseCards.forEach((card, i) => {
+            if (appData[i]) {
+                const h4 = card.querySelector('h4');
+                const p = card.querySelector('p');
+                const desc = card.querySelector('.use-case-desc');
+                if (h4) h4.textContent = appData[i].title;
+                if (p) p.textContent = appData[i].region;
+                if (desc) desc.textContent = appData[i].desc;
+            }
+        });
+
+        // ===== SOLUTIONS =====
+        updateText('#solutions .section-label', 'solutionsLabel');
+        const solTitle = document.querySelector('#solutions .section-title');
+        const solDesc = document.querySelector('#solutions .section-header .section-description');
+        if (solTitle) solTitle.textContent = lang === 'kr' ? '가정에서 지역난방까지' : 'From Home to Grid';
+        if (solDesc) solDesc.textContent = lang === 'kr' ? '다양한 규모에 맞춘 모듈형 열저장 시스템입니다.' : 'Modular TES systems designed for deployment at multiple scales.';
+
+        const solutionCards = document.querySelectorAll('.solutions-grid .solution-card');
+        const solData = lang === 'kr' ? [
+            { type: '규모 1', title: '단독 주택', desc: '개별 가정용 소형 열저장 장치. 태양광·소형 풍력과 연계해 오프그리드 난방에 최적입니다.', features: ['독립형 난방 시스템', '오프그리드 가능', '재생에너지 연계'] },
+            { type: '규모 2', title: '소형 건물', desc: '다세대 주택, 소규모 상업시설용 열저장 시스템. 공유 인프라로 세대당 비용을 절감합니다.', features: ['다세대 건물 지원', '공유 난방 네트워크', '규모의 경제'] },
+            { type: '규모 3', title: '지역 난방', desc: '지역난방망 및 카르노 배터리용 대규모 열저장. 전력망 연계 유틸리티급 에너지 저장.', features: ['지역난방 네트워크', '카르노 배터리 연계', '전력망급 저장 용량'] }
+        ] : [
+            { type: 'Scale 1', title: 'Single Household', desc: 'Compact TES units for individual homes. Ideal for off-grid heating in remote areas with rooftop solar or small wind turbines.', features: ['Independent heating system', 'Off-grid capability', 'Renewable energy integration'] },
+            { type: 'Scale 2', title: 'Small Building', desc: 'TES systems for multi-unit residential buildings and small commercial facilities. Shared infrastructure reduces per-unit costs.', features: ['Multi-unit building support', 'Shared heating network', 'Economies of scale'] },
+            { type: 'Scale 3', title: 'Regional District', desc: 'Large-scale TES for district heating networks and Carnot Battery applications. Grid-connected systems for utility-scale energy storage.', features: ['District heating network', 'Carnot Battery integration', 'Grid-scale storage capacity'] }
+        ];
+        solutionCards.forEach((card, i) => {
+            if (solData[i]) {
+                const type = card.querySelector('.solution-type');
+                const h3 = card.querySelector('h3');
+                const p = card.querySelector('p');
+                const lis = card.querySelectorAll('.solution-features li');
+                if (type) type.textContent = solData[i].type;
+                if (h3) h3.textContent = solData[i].title;
+                if (p) p.textContent = solData[i].desc;
+                lis.forEach((li, j) => {
+                    if (solData[i].features[j]) li.textContent = solData[i].features[j];
+                });
+            }
+        });
+
+        // Strategy & Technology
+        const stratTitle = document.querySelectorAll('#solutions .subsection-title')[0];
+        const stratDesc = document.querySelectorAll('#solutions .section-description')[1];
+        if (stratTitle) stratTitle.textContent = t.strategyTitle;
+        if (stratDesc) stratDesc.textContent = t.strategyDesc;
+
+        // Pillars
+        const pillarData = lang === 'kr' ? [
+            { title: '다중 규모 열저장 개발', desc: '단독 주택부터 건물, 지역난방까지 다양한 규모에 맞는 열저장 시스템 설계', techs: [{ title: '고온 가열 시스템', desc: '증기를 열매체로 활용한 직접 응축 열교환 기술. 1,000°C 이상 고효율 충전 가능', tag: '가열 방식' }, { title: '첨단 단열 기술', desc: '암석·모래 복합 매체와 다층 단열 설계로 장시간 저장 시 열손실 최소화', tag: '열손실 저감' }] },
+            { title: '충·방전 최적화', desc: '다양한 열저장 구성, 충전 방식, 방전 패턴에 대한 최적 운영 전략 개발', techs: [{ title: '충·방전 시뮬레이션', desc: '다양한 운영 시나리오에 대한 전산 모델링으로 충전 방식, 시간, 방전 패턴 최적화', tag: '시뮬레이션' }, { title: '기술적 한계 예측', desc: '물리 기반 및 데이터 기반 모델로 다양한 운영 조건에서의 성능 한계 예측', tag: '한계 예측' }] },
+            { title: '안정적 증기 생성', desc: '카르노 배터리의 효율적 발전을 위한 일정하고 고품질의 증기 출력 확보', techs: [{ title: '하이브리드 증기 생성', desc: '관류식과 급랭식 하이브리드 시스템으로 온도 변화에도 안정적인 증기 품질 제어', tag: '증기 방식' }, { title: 'AI 기반 운영 제어', desc: '강화학습 기반 디지털 트윈으로 실시간 최적 제어, 일관된 증기 품질 확보', tag: 'AI 제어' }] }
+        ] : [
+            { title: 'Multi-Scale TES Development', desc: 'Designing thermal energy storage systems for deployment across multiple scales—from single households to buildings and district heating networks.', techs: [{ title: 'High-Temperature Heating System', desc: 'Direct condensation heat exchange technology enabling efficient charging to 1,000°C+ using steam as the heat transfer medium.', tag: 'Heating Method' }, { title: 'Advanced Thermal Insulation', desc: 'Multi-layer insulation engineering with rock & sand composite medium, minimizing heat loss during long-duration storage.', tag: 'Heat Loss Reduction' }] },
+            { title: 'Charge & Discharge Optimization', desc: 'Developing optimal operation strategies for diverse TES configurations, charging methods, and discharge patterns.', techs: [{ title: 'Charge/Discharge Simulation', desc: 'Computational modeling for diverse operating scenarios, optimizing charging methods, duration, and discharge patterns.', tag: 'Simulation' }, { title: 'Technical Limit Prediction', desc: 'Physics-based and data-driven models to predict performance boundaries under various operating conditions.', tag: 'Limit Prediction' }] },
+            { title: 'Stable Steam Generation', desc: 'Ensuring consistent, high-quality steam output essential for efficient power generation in Carnot Battery systems.', techs: [{ title: 'Hybrid Steam Generation', desc: 'Once-through and quenching hybrid system for stable steam quality control under varying temperature conditions.', tag: 'Steam Methodology' }, { title: 'AI-based Operation Control', desc: 'Reinforcement learning-based digital twin for real-time optimal control, ensuring consistent steam quality.', tag: 'AI Control' }] }
+        ];
+        const pillarCols = document.querySelectorAll('.pillar-column');
+        pillarCols.forEach((col, i) => {
+            if (pillarData[i]) {
+                const pillarCard = col.querySelector('.pillar-card');
+                if (pillarCard) {
+                    const h3 = pillarCard.querySelector('h3');
+                    const p = pillarCard.querySelector('p');
+                    if (h3) h3.textContent = pillarData[i].title;
+                    if (p) p.textContent = pillarData[i].desc;
+                }
+                const techCards = col.querySelectorAll('.tech-card');
+                techCards.forEach((tc, j) => {
+                    if (pillarData[i].techs[j]) {
+                        const h4 = tc.querySelector('h4');
+                        const p = tc.querySelector('p');
+                        const tag = tc.querySelector('.tech-tag');
+                        if (h4) h4.textContent = pillarData[i].techs[j].title;
+                        if (p) p.textContent = pillarData[i].techs[j].desc;
+                        if (tag) tag.textContent = pillarData[i].techs[j].tag;
+                    }
+                });
+            }
+        });
+
+        // Milestones
+        const milestoneTitle = document.querySelectorAll('#solutions .subsection-title')[1];
+        if (milestoneTitle) milestoneTitle.textContent = t.milestonesTitle;
+
+        const milestoneCards = document.querySelectorAll('.milestones-grid .milestone-card');
+        const mileData = [
+            { title: t.milestone1Title, desc: t.milestone1Desc },
+            { title: t.milestone2Title, desc: t.milestone2Desc },
+            { title: t.milestone3Title, desc: t.milestone3Desc },
+            { title: t.milestone4Title, desc: t.milestone4Desc }
+        ];
+        milestoneCards.forEach((card, i) => {
+            if (mileData[i]) {
+                const h3 = card.querySelector('h3');
+                const p = card.querySelector('p');
+                if (h3) h3.textContent = mileData[i].title;
+                if (p) p.textContent = mileData[i].desc;
+            }
+            const labLink = card.querySelector('.lab-link');
+            if (labLink) labLink.textContent = t.visitLab;
+        });
+
+        // ===== ROADMAP =====
+        updateText('#roadmap .section-label', 'roadmapLabel');
+        updateText('#roadmap .section-title', 'roadmapTitle');
+        updateText('#roadmap .section-description', 'roadmapDesc');
+
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const roadmapData = [
+            { year: t.year2026, badge: t.now, title: t.phase1Title, items: t.phase1Items },
+            { year: t.year2027, title: t.phase2Title, items: t.phase2Items },
+            { year: t.year2029, title: t.phase3Title, items: t.phase3Items },
+            { year: t.year2031, title: t.phase4Title, items: t.phase4Items }
+        ];
+        timelineItems.forEach((item, i) => {
+            if (roadmapData[i]) {
+                const year = item.querySelector('.timeline-year');
+                const badge = item.querySelector('.timeline-badge');
+                const h3 = item.querySelector('.timeline-content h3');
+                const lis = item.querySelectorAll('.timeline-content li');
+                if (year) year.textContent = roadmapData[i].year;
+                if (badge) badge.textContent = roadmapData[i].badge || '';
+                if (h3) h3.textContent = roadmapData[i].title;
+                lis.forEach((li, j) => {
+                    if (roadmapData[i].items[j]) li.textContent = roadmapData[i].items[j];
+                });
+            }
+        });
+
+        // Track Record
+        const trackTitle = document.querySelectorAll('#roadmap .subsection-title')[0];
+        if (trackTitle) trackTitle.textContent = t.trackRecordTitle;
+
+        const progCats = document.querySelectorAll('.program-category');
+        const progData = [
+            { title: t.bizDev, programs: [[t.program1Name, t.program1Desc], [t.program2Name, t.program2Desc], [t.program3Name, t.program3Desc]] },
+            { title: t.investFunding, programs: [[t.program4Name, t.program4Desc], [t.program5Name, t.program5Desc], [t.program6Name, t.program6Desc]] },
+            { title: t.globalExpansion, programs: [[t.program7Name, t.program7Desc], [t.program8Name, t.program8Desc], [t.program9Name, t.program9Desc]] }
+        ];
+        progCats.forEach((cat, i) => {
+            if (progData[i]) {
+                const h3 = cat.querySelector('h3');
+                if (h3) h3.textContent = progData[i].title;
+                const lis = cat.querySelectorAll('.program-list li');
+                lis.forEach((li, j) => {
+                    if (progData[i].programs[j]) {
+                        const name = li.querySelector('.program-name');
+                        const desc = li.querySelector('.program-desc');
+                        if (name) name.textContent = progData[i].programs[j][0];
+                        if (desc) desc.textContent = progData[i].programs[j][1];
+                    }
+                });
+            }
+        });
+
+        // Program stats
+        const statBoxes = document.querySelectorAll('.programs-stats .stat-box');
+        const statBoxData = [
+            { value: '2025.12', desc: t.founded },
+            { value: '15+', desc: t.startupPrograms },
+            { value: '10+', desc: t.mentoringSessions },
+            { value: '3', desc: t.intlPartners },
+            { value: '12+', desc: t.patentApps }
+        ];
+        statBoxes.forEach((box, i) => {
+            if (statBoxData[i]) {
+                const val = box.querySelector('.stat-value');
+                const desc = box.querySelector('.stat-desc');
+                if (desc) desc.textContent = statBoxData[i].desc;
+            }
+        });
+
+        // ===== TEAM =====
+        updateText('#team .section-label', 'teamLabel');
+        updateText('#team .section-title', 'teamTitle');
+        updateText('#team .section-description', 'teamDesc');
+
+        const teamMembers = document.querySelectorAll('.team-member');
+        const teamData = [
+            { name: t.ceoName, title: t.ceoTitle, role: t.ceoRole },
+            { name: t.ctoName, title: t.ctoTitle, role: t.ctoRole }
+        ];
+        teamMembers.forEach((member, i) => {
+            if (teamData[i]) {
+                const h3 = member.querySelector('h3');
+                const title = member.querySelector('.member-title');
+                const role = member.querySelector('.member-role');
+                if (h3) h3.textContent = teamData[i].name;
+                if (title) title.textContent = teamData[i].title;
+                if (role) role.textContent = teamData[i].role;
+            }
+        });
+
+        // Mission
         updateText('.mission-content h3', 'missionTitle');
         updateText('.mission-content > p', 'missionDesc');
+        const goals = document.querySelectorAll('.mission-goal');
+        const goalData = [
+            { value: t.goal1Value, label: t.goal1Label },
+            { value: t.goal2Value, label: t.goal2Label },
+            { value: t.goal3Value, label: t.goal3Label }
+        ];
+        goals.forEach((goal, i) => {
+            if (goalData[i]) {
+                const val = goal.querySelector('.goal-value');
+                const label = goal.querySelector('.goal-label');
+                if (val) val.textContent = goalData[i].value;
+                if (label) label.textContent = goalData[i].label;
+            }
+        });
 
         // Join Us
-        const joinUsTitle = document.querySelectorAll('#team .subsection-title')[0];
-        if (joinUsTitle) joinUsTitle.textContent = t.joinUsTitle;
+        const joinTitle = document.querySelectorAll('#team .subsection-title')[0];
+        const joinDesc = document.querySelectorAll('#team .section-description')[1];
+        if (joinTitle) joinTitle.textContent = t.joinUsTitle;
+        if (joinDesc) joinDesc.textContent = t.joinUsDesc;
 
-        // Contact
+        const jobCards = document.querySelectorAll('.job-card');
+        const jobData = [
+            { type: t.job1Type, title: t.job1Title, desc: t.job1Desc },
+            { type: t.job2Type, title: t.job2Title, desc: t.job2Desc },
+            { type: t.job3Type, title: t.job3Title, desc: t.job3Desc }
+        ];
+        jobCards.forEach((card, i) => {
+            if (jobData[i]) {
+                const type = card.querySelector('.job-type');
+                const h4 = card.querySelector('h4');
+                const p = card.querySelector('p');
+                const btn = card.querySelector('.job-apply');
+                if (type) type.textContent = jobData[i].type;
+                if (h4) h4.textContent = jobData[i].title;
+                if (p) p.textContent = jobData[i].desc;
+                if (btn && !btn.classList.contains('showing-email')) btn.textContent = t.applyNow;
+            }
+        });
+
+        // ===== CONTACT =====
         updateText('#contact .section-label', 'contactLabel');
         updateText('#contact .section-title', 'contactTitle');
         updateText('#contact .section-description', 'contactDesc');
         updateText('.investor-content h3', 'investorTitle');
         updateText('.investor-content > p', 'investorDesc');
+
+        const highlights = document.querySelectorAll('.highlight-item');
+        const highlightData = [
+            { label: t.stageLabel, value: t.stageValue },
+            { label: t.focusLabel, value: t.focusValue },
+            { label: t.marketLabel2, value: t.marketValue }
+        ];
+        highlights.forEach((item, i) => {
+            if (highlightData[i]) {
+                const label = item.querySelector('.highlight-label');
+                const value = item.querySelector('.highlight-value');
+                if (label) label.textContent = highlightData[i].label;
+                if (value) value.textContent = highlightData[i].value;
+            }
+        });
+
+        const contactBtn = document.querySelector('.investor-btn');
+        if (contactBtn && !contactBtn.classList.contains('showing-email')) {
+            contactBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> ' + t.contactUs;
+        }
         updateText('.contact-location-inner span', 'location');
 
-        // Footer
+        // ===== FOOTER =====
         updateText('.footer-brand p', 'footerTagline');
         updateText('.footer-bottom p', 'copyright');
+
+        // Footer links
+        const footerLinks = document.querySelectorAll('.footer-links a');
+        const footerLinkData = lang === 'kr' ? ['회사소개', '기술', '시장', '솔루션', '로드맵', '팀', '문의'] : ['About', 'The Challenge', 'Market', 'Solutions', 'Roadmap', 'Team', 'Contact'];
+        footerLinks.forEach((link, i) => {
+            if (footerLinkData[i]) link.textContent = footerLinkData[i];
+        });
 
         // Update language toggle buttons
         document.querySelectorAll('.lang-btn').forEach(btn => {

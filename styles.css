@@ -2612,15 +2612,22 @@ section {
 }
 
 .subsection-title {
-    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 700;
     color: var(--text-primary);
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
 }
 
 /* Target Market Section */
+.target-market-section {
+    background: var(--bg-light);
+    padding: 3rem 2rem;
+    border-radius: var(--radius-xl);
+    margin-top: 3rem;
+}
+
 .target-market-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

@@ -48,34 +48,22 @@ document.addEventListener('DOMContentLoaded', function() {
             marketLabel: "Market Opportunity",
             marketTitle: "The Growing Demand for Energy Storage",
             marketDesc: "Global energy storage capacity must increase dramatically to meet net-zero targets. Thermal storage offers the lowest-cost solution for long-duration applications.",
-            stat1Value: "500",
-            stat1Label: "TES Market by 2030",
-            stat1Desc: "Global thermal energy storage market projected to reach $500B+ annually",
-            stat1Source: "Source: IEA World Energy Outlook 2024",
-            stat2Value: "3",
-            stat2Label: "Annual Growth Rate",
-            stat2Desc: "Energy storage deployment growing 3x faster than renewable generation",
-            stat2Source: "Source: BloombergNEF 2024",
-            stat3Value: "70",
-            stat3Label: "Cost Reduction Potential",
-            stat3Desc: "TES can achieve 70% lower LCOS than lithium-ion for 8+ hour storage",
-            stat3Source: "Source: NREL Cost Projections 2024",
-            driversTitle: "Key Market Drivers",
-            driver1Title: "Net-Zero Commitments",
-            driver1Desc: "150+ countries committed to carbon neutrality by 2050, requiring massive energy storage deployment",
-            driver2Title: "Renewable Curtailment",
-            driver2Desc: "Growing solar/wind overcapacity creates economic incentive for long-duration storage",
-            driver3Title: "Grid Modernization",
-            driver3Desc: "Aging infrastructure and increasing electrification demand flexible storage solutions",
+            driversTitle: "Why Long-Duration Storage Matters",
+            driver1Title: "Net-Zero Infrastructure",
+            driver1Desc: "The IEA projects that achieving net-zero by 2050 will require over 2,000 GW of long-duration energy storage capacity globally.",
+            driver2Title: "Lithium-Ion Cost Barrier",
+            driver2Desc: "Beyond 8 hours of storage, lithium-ion battery costs per kWh increase sharply. Thermal storage becomes more economical as duration extends.",
+            driver3Title: "Global Policy Support",
+            driver3Desc: "Major economies including the EU, US, and Korea are expanding R&D funding and subsidies for long-duration storage technologies.",
 
-            // Target Market
-            targetMarketTitle: "Initial Target Market",
-            targetMarket1Title: "Extreme Cold Regions",
-            targetMarket1Desc: "Regions with 6-8 months of heating demand. Cold climate markets have the highest need for reliable, clean heating solutions.",
-            targetMarket2Title: "Renewable-Rich Areas",
-            targetMarket2Desc: "Locations with abundant solar and wind potential. Ideal for low-cost renewable-powered thermal storage systems.",
-            targetMarket3Title: "Decarbonization Policies",
-            targetMarket3Desc: "Countries with aggressive renewable energy targets. Strong policy support for clean heating alternatives.",
+            // Why Mongolia
+            whyMongoliaTitle: "Why Start in Mongolia?",
+            whyMongolia1Title: "Extreme Heating Demand",
+            whyMongolia1Desc: "Average winter temperature of -25°C, 8 months of heating required. The most heating-dependent market in the world.",
+            whyMongolia2Title: "Abundant Renewables",
+            whyMongolia2Desc: "2,200GW solar and 1,100GW wind potential. Ideal for low-cost renewable-powered thermal storage.",
+            whyMongolia3Title: "Government Support",
+            whyMongolia3Desc: "30% renewable energy target by 2030. Strong policy push for clean heating solutions.",
 
             // Technology Comparison
             comparisonTitle: "Technology Comparison",
@@ -108,8 +96,8 @@ document.addEventListener('DOMContentLoaded', function() {
             milestone1Desc: "Extensive research experience in steam generation, two-phase flow, and high-temperature thermal systems",
             milestone2Title: "12+ Patent Applications",
             milestone2Desc: "Filed patents covering core TES and heat exchange technologies",
-            milestone3Title: "Global Testbed",
-            milestone3Desc: "MOU signed for Mongolia testbed partnership to validate TES under extreme cold-climate conditions",
+            milestone3Title: "Global Partnership",
+            milestone3Desc: "MOU signed with YN E Tulga for testbed partnership to validate TES under extreme cold-climate conditions",
             milestone4Title: "University Lab Spinoff",
             milestone4Desc: "Founded from Inha University's MFTEL (Multiphase Flow & Thermal Engineering Lab), bringing academic research into commercial reality.",
             visitLab: "Visit MFTEL Lab",
@@ -135,26 +123,26 @@ document.addEventListener('DOMContentLoaded', function() {
             // Track Record
             trackRecordTitle: "Track Record",
             bizDev: "Business Development",
-            program1Name: "Youth Startup Academy",
-            program1Desc: "Business plan development and legal entity formation",
-            program2Name: "Lab-driven Startup Program",
-            program2Desc: "Innovation Lab commercialization support",
-            program3Name: "IP R&D Strategy Consulting",
-            program3Desc: "Intellectual property portfolio development",
+            program1Name: "Company Founded",
+            program1Desc: "PIOST Inc. established",
+            program2Name: "Lab Startup Program",
+            program2Desc: "University research commercialization",
+            program3Name: "IP R&D Consulting",
+            program3Desc: "Patent strategy development",
             investFunding: "Investment & Funding",
-            program4Name: "TIPS Program",
-            program4Desc: "Government-backed VC mentoring program",
-            program5Name: "TIPS Challenge",
-            program5Desc: "Investor pitch competition finalist",
-            program6Name: "IR Sessions",
-            program6Desc: "Regular investor relations activities",
+            program4Name: "IR Activities",
+            program4Desc: "Regular investor relations",
+            program5Name: "Government R&D",
+            program5Desc: "Government grant awarded",
+            program6Name: "Pitch Competition",
+            program6Desc: "Finals selection",
             globalExpansion: "Global Expansion",
-            program7Name: "Gladiator Program - Mongolia",
-            program7Desc: "MOU signing with YN E Tulga",
+            program7Name: "Gladiator Program",
+            program7Desc: "MOU signed with YN E Tulga",
             program8Name: "PickPack Partnership",
-            program8Desc: "2025 Global R&D Creator collaboration",
+            program8Desc: "Global R&D Creator collaboration",
             program9Name: "KOMIR Partnership",
-            program9Desc: "Strategic partnership in Mongolia",
+            program9Desc: "Strategic international partnership",
             founded: "Founded",
             startupPrograms: "Startup Programs",
             mentoringSessions: "Mentoring Sessions",
@@ -201,9 +189,9 @@ document.addEventListener('DOMContentLoaded', function() {
             stageLabel: "Stage",
             stageValue: "Pre-Seed / Seed",
             focusLabel: "Focus",
-            focusValue: "Prototype & Pilot",
+            focusValue: "Tech Validation & Product",
             marketLabel2: "Market",
-            marketValue: "Korea & Asia",
+            marketValue: "Global Cold Regions",
             contactUs: "Contact Us",
             location: "Incheon, South Korea",
 
@@ -222,18 +210,18 @@ document.addEventListener('DOMContentLoaded', function() {
             heroBtn2: "투자 문의",
 
             // About
-            aboutLabel: "회사 소개",
+            aboutLabel: "회사소개",
             aboutTitle: "열로 저장하고, 열로 공급합니다",
             aboutDesc: "PIOST는 화석연료 보일러를 재생에너지 기반 열저장 시스템으로 대체합니다. 1,000°C 이상 고온 저장, 암석·모래 복합 축열재, 직접 응축 열교환—핵심 기술 모두 자체 특허로 보유하고 있습니다.",
             aboutExtended: "전 세계 에너지 소비의 절반은 난방입니다. 하지만 대부분은 아직도 석탄과 가스에 의존하죠. PIOST는 어디서나 구할 수 있는 암석과 모래에 열을 저장해 이 문제를 해결합니다. 리튬이온 배터리보다 저렴하고, 30년 넘게 쓸 수 있으며, 화재 위험도 없습니다.",
 
             // Why TES
-            challengeLabel: "문제 인식",
+            challengeLabel: "문제인식",
             whyTesTitle: "난방, 왜 아직도 화석연료인가요?",
             whatIsTes: "열에너지 저장이란?",
-            whatIsTesDesc: "재생전력을 고온의 열로 바꿔 암석, 모래 같은 축열재에 저장합니다. 저장된 열은 난방에 쓰거나, 터빈을 돌려 전기로 만들 수 있어요. 리튬이온과 달리 희소 광물이 필요 없고, 불이 날 위험도 없습니다.",
+            whatIsTesDesc: "재생전력을 고온의 열로 바꿔 암석, 모래 같은 축열재에 저장합니다. 저장된 열은 난방에 사용하거나, 터빈을 돌려 전기로 변환할 수 있습니다. 리튬이온과 달리 희소 광물이 필요 없고, 화재 위험도 없습니다.",
             whyTesMatters: "난방이 바뀌어야 진짜 에너지 전환입니다",
-            whyTesMattersDesc1: "전 세계 에너지 소비의 약 50%가 난방입니다. 그런데 대부분의 건물과 공장은 아직도 석탄, 가스 보일러를 씁니다. 태양광·풍력이 아무리 늘어나도, 난방이 바뀌지 않으면 의미가 없어요.",
+            whyTesMattersDesc1: "전 세계 에너지 소비의 약 50%가 난방입니다. 그런데 대부분의 건물과 공장은 아직도 석탄, 가스 보일러를 사용합니다. 태양광·풍력이 아무리 늘어나도, 난방이 바뀌지 않으면 진정한 탈탄소화는 불가능합니다.",
             whyTesMattersDesc2: "PIOST는 재생전력을 열로 바꿔 저장합니다. 해가 지고 바람이 멎어도 따뜻한 난방을 공급하고, 필요하면 전기까지 생산할 수 있습니다.",
             tesAdvantage: "PIOST만의 차별점",
             tesAdvantageDesc1: "암석·모래 복합 축열재, 직접 응축 열교환 방식, 모듈형 설계—모두 자체 특허 기술입니다. 1,000°C 이상 고온 저장과 높은 열효율을 동시에 달성했습니다.",
@@ -252,34 +240,22 @@ document.addEventListener('DOMContentLoaded', function() {
             marketLabel: "시장 기회",
             marketTitle: "2030년, 1조 달러 시장이 열립니다",
             marketDesc: "에너지 저장 시장은 폭발적으로 성장 중입니다. 그중에서도 난방 탈탄소화가 가장 큰 기회입니다.",
-            stat1Value: "1",
-            stat1Label: "조 달러",
-            stat1Desc: "2030년 글로벌 에너지 저장 시장 규모",
-            stat1Source: "맥킨지",
-            stat2Value: "30",
-            stat2Label: "%",
-            stat2Desc: "국내 에너지 소비 중 난방 비중",
-            stat2Source: "한국에너지경제연구원",
-            stat3Value: "80",
-            stat3Label: "%",
-            stat3Desc: "몽골의 화석연료 의존 비율",
-            stat3Source: "몽골 에너지부",
-            driversTitle: "장주기 저장 시장의 기회",
-            driver1Title: "넷제로 달성 필수 인프라",
-            driver1Desc: "IEA에 따르면 2050년 넷제로 달성에 2,000GW 이상의 장주기 저장이 필요합니다.",
-            driver2Title: "리튬이온의 한계",
-            driver2Desc: "8시간 이상 저장에서 리튬이온은 비용이 급격히 상승합니다. 카르노 배터리가 대안입니다.",
-            driver3Title: "정책적 지원 확대",
-            driver3Desc: "EU, 미국, 한국 등 주요국에서 장주기 저장 기술에 대한 R&D 지원이 확대되고 있습니다.",
+            driversTitle: "장주기 저장이 필요한 이유",
+            driver1Title: "넷제로 필수 인프라",
+            driver1Desc: "IEA는 2050년 탄소중립 달성에 2,000GW 이상의 장주기 저장 설비가 필요하다고 전망합니다.",
+            driver2Title: "리튬이온의 경제성 한계",
+            driver2Desc: "8시간 이상 저장에서는 리튬이온 배터리의 kWh당 비용이 급등합니다. 열저장은 저장 시간이 길어질수록 경제성이 높아집니다.",
+            driver3Title: "글로벌 정책 지원",
+            driver3Desc: "EU, 미국, 한국 등 주요국이 장주기 저장 기술에 대한 R&D 투자와 보조금 정책을 확대하고 있습니다.",
 
             // Target Market (Mongolia)
-            targetMarketTitle: "초기 타겟 시장",
-            targetMarket1Title: "극한 한랭 지역",
-            targetMarket1Desc: "연간 6-8개월 난방이 필요한 지역. 한랭 기후 시장은 안정적인 청정 난방 솔루션 수요가 가장 높습니다.",
-            targetMarket2Title: "재생에너지 풍부 지역",
-            targetMarket2Desc: "태양광 및 풍력 잠재량이 풍부한 지역. 저비용 재생전력 기반 열저장 시스템의 최적지입니다.",
-            targetMarket3Title: "탈탄소 정책 국가",
-            targetMarket3Desc: "적극적인 재생에너지 목표를 가진 국가들. 청정 난방 대안에 대한 강력한 정책 지원이 있습니다.",
+            whyMongoliaTitle: "왜 몽골에서 시작하나요?",
+            whyMongolia1Title: "극한의 난방 수요",
+            whyMongolia1Desc: "겨울 평균 -25°C, 연간 8개월 난방 필수. 전 세계에서 가장 난방이 절실한 시장입니다.",
+            whyMongolia2Title: "풍부한 재생에너지",
+            whyMongolia2Desc: "태양광 2,200GW, 풍력 1,100GW 잠재량. 저렴한 재생전력 기반 열저장의 최적지입니다.",
+            whyMongolia3Title: "정부 정책 지원",
+            whyMongolia3Desc: "2030년까지 재생에너지 비중 30% 목표. 청정 난방 솔루션에 대한 강력한 정책 지원이 있습니다.",
 
             // Technology Comparison
             comparisonTitle: "경쟁사 대비 기술 비교",
@@ -312,8 +288,8 @@ document.addEventListener('DOMContentLoaded', function() {
             milestone1Desc: "암석·모래 복합 축열재, 직접 응축 열교환, 모듈형 설계—모두 자체 특허입니다.",
             milestone2Title: "12건 이상 특허 포트폴리오",
             milestone2Desc: "열저장, 열교환, 시스템 설계 전 영역에 걸쳐 국내외 IP를 확보했습니다.",
-            milestone3Title: "몽골 현지 파트너 확보",
-            milestone3Desc: "YN E Tulga사와 MOU 체결. -25°C 극한 환경에서 기술을 검증합니다.",
+            milestone3Title: "글로벌 파트너십 확보",
+            milestone3Desc: "YN E Tulga사와 MOU 체결. -25°C 극한 환경에서 기술을 검증할 예정입니다.",
             milestone4Title: "10년 연구 성과 기반 창업",
             milestone4Desc: "인하대학교 MFTEL(다상유동·열공학연구실)에서 스핀오프했습니다.",
             visitLab: "연구실 둘러보기",
@@ -339,26 +315,26 @@ document.addEventListener('DOMContentLoaded', function() {
             // Track Record
             trackRecordTitle: "지금까지 이만큼 해왔습니다",
             bizDev: "사업화",
-            program1Name: "청년창업사관학교",
-            program1Desc: "사업계획 수립 및 법인 설립",
-            program2Name: "연구실 창업 지원",
+            program1Name: "법인 설립",
+            program1Desc: "㈜피오스트 설립 완료",
+            program2Name: "실험실특화형창업선도대학",
             program2Desc: "대학 연구 성과 사업화",
             program3Name: "IP R&D 컨설팅",
             program3Desc: "특허 전략 수립",
             investFunding: "투자 유치",
-            program4Name: "TIPS 프로그램",
-            program4Desc: "정부 R&D 지원 프로그램",
-            program5Name: "TIPS 챌린지",
-            program5Desc: "피칭 경진대회 본선",
-            program6Name: "IR 활동",
-            program6Desc: "투자자 대상 정기 IR",
+            program4Name: "IR 활동",
+            program4Desc: "투자자 대상 정기 IR",
+            program5Name: "정부 R&D",
+            program5Desc: "정부 지원 사업 수주",
+            program6Name: "피칭 경진대회",
+            program6Desc: "본선 진출",
             globalExpansion: "글로벌",
             program7Name: "글래디에이터",
-            program7Desc: "몽골 현지 MOU 체결",
+            program7Desc: "YN E Tulga MOU 체결",
             program8Name: "픽팩 파트너십",
             program8Desc: "글로벌 R&D 크리에이터",
             program9Name: "KOMIR 협력",
-            program9Desc: "몽골 전략 파트너십",
+            program9Desc: "해외 전략 파트너십",
             founded: "법인 설립",
             startupPrograms: "창업 프로그램",
             mentoringSessions: "멘토링",
@@ -393,21 +369,21 @@ document.addEventListener('DOMContentLoaded', function() {
             job2Desc: "디지털 트윈 및 AI 기반 운영 최적화",
             job3Type: "사업개발",
             job3Title: "비즈니스 개발",
-            job3Desc: "몽골·중앙아시아 시장 개척",
+            job3Desc: "글로벌 시장 개척 및 파트너십 구축",
             applyNow: "지원하기",
 
             // Contact
             contactLabel: "투자 문의",
             contactTitle: "함께 성장할 파트너를 찾습니다",
-            contactDesc: "2030년 1조 달러 시장, PIOST와 함께 선점하세요.",
+            contactDesc: "2030년 1조 달러 열저장 시장, PIOST와 함께 선점하세요.",
             investorTitle: "투자 및 파트너십",
-            investorDesc: "몽골 실증과 제품 상용화를 위한 시드 투자를 유치하고 있습니다. 청정 난방 시장에 관심 있는 투자자, 파트너의 연락을 환영합니다.",
+            investorDesc: "프로토타입 개발과 기술 검증을 위한 시드 투자를 유치하고 있습니다. 장주기 에너지 저장과 청정 난방 기술에 관심 있는 투자자, 파트너의 연락을 환영합니다.",
             stageLabel: "단계",
             stageValue: "프리시드 / 시드",
             focusLabel: "집중",
-            focusValue: "몽골 실증 · 제품화",
+            focusValue: "기술 검증 · 제품화",
             marketLabel2: "시장",
-            marketValue: "몽골 · 중앙아시아",
+            marketValue: "글로벌 한랭 지역",
             contactUs: "연락하기",
             location: "인천, 대한민국",
 
@@ -448,8 +424,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         heroLinesEl.forEach((line, lineIndex) => {
             const text = heroTexts[lineIndex] || '';
+            const isHighlight = line.classList.contains('highlight');
             line.innerHTML = '';
             line.style.opacity = '1';
+            // Override transparent text fill for highlighted lines
+            if (isHighlight) {
+                line.style.webkitTextFillColor = 'unset';
+                line.style.background = 'none';
+            }
 
             if (text) {
                 [...text].forEach((char, charIndex) => {
@@ -460,6 +442,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     span.style.filter = 'blur(8px)';
                     span.style.transform = 'translateY(15px) translateX(8px)';
                     span.style.transition = 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+                    // Apply gradient to each span for highlight effect
+                    if (isHighlight) {
+                        span.style.background = 'linear-gradient(135deg, #ff4d6d 0%, #f472b6 100%)';
+                        span.style.webkitBackgroundClip = 'text';
+                        span.style.webkitTextFillColor = 'transparent';
+                        span.style.backgroundClip = 'text';
+                    }
                     line.appendChild(span);
 
                     setTimeout(() => {
@@ -535,12 +524,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Market stats - update all 6 stat cards
         const statCards = document.querySelectorAll('#market .stat-card');
         const statData = lang === 'kr' ? [
-            { num: '1', unit: '조 달러', label: '시장 규모', desc: '2030년 글로벌 에너지 저장 시장 규모', src: '맥킨지' },
-            { num: '30', unit: '%', label: '난방 비중', desc: '국내 최종에너지 소비 중 난방 비율', src: '한국에너지경제연구원' },
-            { num: '80', unit: '%', label: '화석연료 의존', desc: '몽골 에너지원 중 화석연료 비중', src: '몽골 에너지부' },
-            { num: '2,200', unit: 'GW', label: '태양광 잠재량', desc: '몽골의 태양광 발전 잠재량', src: '' },
-            { num: '90', unit: '%', label: '아동 건강피해', desc: '대기오염으로 건강 피해를 입는 몽골 아동', src: '' },
-            { num: '-25', unit: '°C', label: '겨울 평균기온', desc: '몽골 겨울철 평균 기온', src: '' }
+            { num: '10', unit: '배', label: '시장 성장률', desc: '2035년까지 글로벌 TES 시장 10배 이상 성장 전망', src: '맥킨지' },
+            { num: '49', unit: '%', label: '난방 에너지 비중', desc: '전 세계 에너지 수요의 절반이 난방용', src: '국제에너지기구(IEA)' },
+            { num: '1,500', unit: 'GW', label: '저장 용량 목표', desc: '2030년까지 글로벌 에너지 저장 용량 6배 확대 목표', src: 'COP28' },
+            { num: '11.7', unit: '%', label: 'TES 연평균 성장률', desc: '2030년까지 TES 시장 109억 달러 규모 전망', src: 'Grand View Research' },
+            { num: '6.5', unit: 'GW', label: '글로벌 CSP 용량', desc: '2022년 기준 전 세계 집광형 태양열 발전 설비', src: 'IRENA' },
+            { num: '70', unit: '%', label: '비용 절감 가능', desc: '8시간 이상 저장 시 리튬이온 대비 LCOS 절감', src: 'NREL' }
         ] : [
             { num: '10', unit: 'x', label: 'Market Growth', desc: 'Global TES market projected to grow more than tenfold by 2035', src: 'McKinsey' },
             { num: '670', unit: 'GW', label: 'PV Capacity in Europe', desc: 'Photovoltaic capacity projected to reach 670GW by 2028', src: 'European Environment Agency' },
@@ -597,22 +586,22 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Target Market
-        const targetMarketTitle = document.querySelector('.target-market-title');
-        if (targetMarketTitle) targetMarketTitle.textContent = t.targetMarketTitle;
+        // Why Mongolia Section
+        const whyMongoliaTitle = document.querySelector('.target-market-title');
+        if (whyMongoliaTitle) whyMongoliaTitle.textContent = t.whyMongoliaTitle;
 
-        const targetMarketCards = document.querySelectorAll('.target-market-card');
-        const targetMarketData = [
-            { title: t.targetMarket1Title, desc: t.targetMarket1Desc },
-            { title: t.targetMarket2Title, desc: t.targetMarket2Desc },
-            { title: t.targetMarket3Title, desc: t.targetMarket3Desc }
+        const whyMongoliaCards = document.querySelectorAll('.target-market-card');
+        const whyMongoliaData = [
+            { title: t.whyMongolia1Title, desc: t.whyMongolia1Desc },
+            { title: t.whyMongolia2Title, desc: t.whyMongolia2Desc },
+            { title: t.whyMongolia3Title, desc: t.whyMongolia3Desc }
         ];
-        targetMarketCards.forEach((card, i) => {
-            if (targetMarketData[i]) {
+        whyMongoliaCards.forEach((card, i) => {
+            if (whyMongoliaData[i]) {
                 const h4 = card.querySelector('.target-market-card-title');
                 const p = card.querySelector('.target-market-card-desc');
-                if (h4) h4.textContent = targetMarketData[i].title;
-                if (p) p.textContent = targetMarketData[i].desc;
+                if (h4) h4.textContent = whyMongoliaData[i].title;
+                if (p) p.textContent = whyMongoliaData[i].desc;
             }
         });
 
@@ -908,7 +897,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Footer links
         const footerLinks = document.querySelectorAll('.footer-links a');
-        const footerLinkData = lang === 'kr' ? ['회사소개', '기술', '시장', '솔루션', '로드맵', '팀', '문의'] : ['About', 'The Challenge', 'Market', 'Solutions', 'Roadmap', 'Team', 'Contact'];
+        const footerLinkData = lang === 'kr' ? ['회사소개', '문제인식', '시장', '솔루션', '로드맵', '팀', '문의'] : ['About', 'The Challenge', 'Market', 'Solutions', 'Roadmap', 'Team', 'Contact'];
         footerLinks.forEach((link, i) => {
             if (footerLinkData[i]) link.textContent = footerLinkData[i];
         });
@@ -1050,8 +1039,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     heroLines.forEach((line, lineIndex) => {
         const text = line.textContent;
+        const isHighlight = line.classList.contains('highlight');
         line.textContent = '';
         line.style.opacity = '1';
+        // Override transparent text fill for highlighted lines
+        if (isHighlight) {
+            line.style.webkitTextFillColor = 'unset';
+            line.style.background = 'none';
+        }
 
         // Split into characters and wrap each
         [...text].forEach((char, charIndex) => {
@@ -1062,6 +1057,13 @@ document.addEventListener('DOMContentLoaded', function() {
             span.style.filter = 'blur(8px)';
             span.style.transform = 'translateY(15px) translateX(8px)';
             span.style.transition = 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+            // Apply gradient to each span for highlight effect
+            if (isHighlight) {
+                span.style.background = 'linear-gradient(135deg, #ff4d6d 0%, #f472b6 100%)';
+                span.style.webkitBackgroundClip = 'text';
+                span.style.webkitTextFillColor = 'transparent';
+                span.style.backgroundClip = 'text';
+            }
             line.appendChild(span);
 
             // Staggered animation - blur to clear, bottom-right to original position

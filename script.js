@@ -1002,17 +1002,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ============================================
-    // Floating Particles
+    // Snow Particles
     // ============================================
     const heroParticles = document.querySelector('.hero-particles');
     if (heroParticles) {
-        for (let i = 0; i < 20; i++) {
+        const sizes = ['small', 'medium', 'large'];
+        for (let i = 0; i < 40; i++) {
             const particle = document.createElement('div');
-            particle.className = 'floating-particle';
+            const size = sizes[Math.floor(Math.random() * 3)];
+            particle.className = `floating-particle ${size}`;
             particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 15 + 's';
-            particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+            particle.style.top = -10 + '%';
+            particle.style.animationDelay = Math.random() * 10 + 's';
+            particle.style.animationDuration = (8 + Math.random() * 12) + 's';
             heroParticles.appendChild(particle);
         }
     }

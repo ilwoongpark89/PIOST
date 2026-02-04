@@ -322,7 +322,7 @@ body {
 .hero-bg .gradient-orb-1 {
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(225, 29, 72, 0.25) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(225, 29, 72, 0.2) 0%, transparent 70%);
     top: 10%;
     right: 10%;
     animation-delay: 0s;
@@ -331,7 +331,7 @@ body {
 .hero-bg .gradient-orb-2 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.2) 0%, transparent 70%);
     bottom: 10%;
     left: 5%;
     animation-delay: -7s;
@@ -340,7 +340,7 @@ body {
 .hero-bg .gradient-orb-3 {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(147, 197, 253, 0.15) 0%, transparent 70%);
     top: 50%;
     left: 30%;
     animation-delay: -14s;
@@ -391,19 +391,37 @@ body {
     opacity: 0.6;
 }
 
-/* Floating particles */
+/* Snow particles */
 .floating-particle {
     position: absolute;
-    width: 4px;
-    height: 4px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
-    animation: floatParticle 15s ease-in-out infinite;
+    animation: snowFall linear infinite;
+    pointer-events: none;
 }
 
-@keyframes floatParticle {
-    0%, 100% {
-        transform: translateY(0) translateX(0);
+.floating-particle.small {
+    width: 3px;
+    height: 3px;
+    opacity: 0.4;
+}
+
+.floating-particle.medium {
+    width: 5px;
+    height: 5px;
+    opacity: 0.6;
+}
+
+.floating-particle.large {
+    width: 7px;
+    height: 7px;
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes snowFall {
+    0% {
+        transform: translateY(-10px) translateX(0) rotate(0deg);
         opacity: 0;
     }
     10% {
@@ -413,7 +431,7 @@ body {
         opacity: 1;
     }
     100% {
-        transform: translateY(-100vh) translateX(50px);
+        transform: translateY(100vh) translateX(30px) rotate(360deg);
         opacity: 0;
     }
 }

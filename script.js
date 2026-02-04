@@ -68,6 +68,15 @@ document.addEventListener('DOMContentLoaded', function() {
             driver3Title: "Grid Modernization",
             driver3Desc: "Aging infrastructure and increasing electrification demand flexible storage solutions",
 
+            // Target Market (Mongolia)
+            targetMarketTitle: "Why Start in Mongolia?",
+            targetMarket1Title: "Extreme Heating Demand",
+            targetMarket1Desc: "Average winter temperature of -25°C, 8 months of heating required. The coldest and most heating-dependent market in the world.",
+            targetMarket2Title: "Abundant Renewables",
+            targetMarket2Desc: "2,200GW solar and 1,100GW wind potential. Ideal location for low-cost renewable-powered thermal storage.",
+            targetMarket3Title: "Government Decarbonization",
+            targetMarket3Desc: "30% renewable energy target by 2030. Strong policy demand for clean heating solutions.",
+
             // Technology Comparison
             comparisonTitle: "Technology Comparison",
             comparisonDesc: "How PIOST compares to other thermal energy storage providers",
@@ -255,13 +264,22 @@ document.addEventListener('DOMContentLoaded', function() {
             stat3Label: "%",
             stat3Desc: "몽골의 화석연료 의존 비율",
             stat3Source: "몽골 에너지부",
-            driversTitle: "왜 몽골부터 시작하나요?",
-            driver1Title: "극한의 난방 수요",
-            driver1Desc: "겨울 평균 -25°C, 연간 8개월 난방 필수. 전 세계에서 가장 춥고, 가장 난방이 절실한 곳입니다.",
-            driver2Title: "탈탄소 정책 가속화",
-            driver2Desc: "몽골 정부는 2030년까지 재생에너지 비중 30% 목표를 세웠습니다. 청정 난방 솔루션에 대한 정책적 수요가 급증하고 있습니다.",
-            driver3Title: "재생에너지의 보고",
-            driver3Desc: "태양광 2,200GW, 풍력 1,100GW 잠재량. 재생전력 기반 청정 난방의 최적지입니다.",
+            driversTitle: "장주기 저장 시장의 기회",
+            driver1Title: "넷제로 달성 필수 인프라",
+            driver1Desc: "IEA에 따르면 2050년 넷제로 달성에 2,000GW 이상의 장주기 저장이 필요합니다.",
+            driver2Title: "리튬이온의 한계",
+            driver2Desc: "8시간 이상 저장에서 리튬이온은 비용이 급격히 상승합니다. 카르노 배터리가 대안입니다.",
+            driver3Title: "정책적 지원 확대",
+            driver3Desc: "EU, 미국, 한국 등 주요국에서 장주기 저장 기술에 대한 R&D 지원이 확대되고 있습니다.",
+
+            // Target Market (Mongolia)
+            targetMarketTitle: "왜 몽골부터 시작하나요?",
+            targetMarket1Title: "극한의 난방 수요",
+            targetMarket1Desc: "겨울 평균 -25°C, 연간 8개월 난방 필수. 전 세계에서 가장 춥고, 가장 난방이 절실한 시장입니다.",
+            targetMarket2Title: "풍부한 재생에너지",
+            targetMarket2Desc: "태양광 2,200GW, 풍력 1,100GW 잠재량. 저렴한 재생전력 기반 열저장의 최적지입니다.",
+            targetMarket3Title: "정부 탈탄소 정책",
+            targetMarket3Desc: "2030년까지 재생에너지 비중 30% 목표. 청정 난방 솔루션에 대한 정책적 수요가 급증 중입니다.",
 
             // Technology Comparison
             comparisonTitle: "경쟁사 대비 기술 비교",
@@ -555,14 +573,33 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
+        // Target Market
+        const targetMarketTitle = document.querySelector('.target-market-title');
+        if (targetMarketTitle) targetMarketTitle.textContent = t.targetMarketTitle;
+
+        const targetMarketCards = document.querySelectorAll('.target-market-card');
+        const targetMarketData = [
+            { title: t.targetMarket1Title, desc: t.targetMarket1Desc },
+            { title: t.targetMarket2Title, desc: t.targetMarket2Desc },
+            { title: t.targetMarket3Title, desc: t.targetMarket3Desc }
+        ];
+        targetMarketCards.forEach((card, i) => {
+            if (targetMarketData[i]) {
+                const h4 = card.querySelector('.target-market-card-title');
+                const p = card.querySelector('.target-market-card-desc');
+                if (h4) h4.textContent = targetMarketData[i].title;
+                if (p) p.textContent = targetMarketData[i].desc;
+            }
+        });
+
         // Technology Comparison
-        const compTitle = document.querySelectorAll('#market .subsection-title')[0];
+        const compTitle = document.querySelectorAll('#market .subsection-title')[1];
         const compDesc = document.querySelectorAll('#market .section-description')[1];
         if (compTitle) compTitle.textContent = t.comparisonTitle;
         if (compDesc) compDesc.textContent = t.comparisonDesc;
 
         // Applications
-        const appTitle = document.querySelectorAll('#market .subsection-title')[1];
+        const appTitle = document.querySelectorAll('#market .subsection-title')[2];
         const appDesc = document.querySelectorAll('#market .section-description')[2];
         if (appTitle) appTitle.textContent = t.applicationsTitle;
         if (appDesc) appDesc.textContent = t.applicationsDesc;
@@ -1058,7 +1095,7 @@ document.addEventListener('DOMContentLoaded', function() {
         '.stat-card', '.solution-card', '.milestone-card',
         '.use-case-card', '.job-card', '.program-category',
         '.pillar-column', '.team-member', '.challenge-block',
-        '.foundation-card'
+        '.foundation-card', '.target-market-card'
     ];
 
     document.querySelectorAll(cardSelectors.join(', ')).forEach((card, index) => {

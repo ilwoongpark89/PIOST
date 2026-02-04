@@ -393,7 +393,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    let currentLang = 'en';
+    let currentLang = 'kr';
 
     // Language switching function
     function setLanguage(lang) {
@@ -919,10 +919,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Check stored preference
+    // Check stored preference, default to Korean
     const storedLang = localStorage.getItem('piost-lang');
     if (storedLang && (storedLang === 'en' || storedLang === 'kr')) {
         setLanguage(storedLang);
+    } else {
+        setLanguage('kr');
     }
     // ============================================
     // Smooth Page Load

@@ -68,14 +68,14 @@ document.addEventListener('DOMContentLoaded', function() {
             driver3Title: "Grid Modernization",
             driver3Desc: "Aging infrastructure and increasing electrification demand flexible storage solutions",
 
-            // Target Market (Mongolia)
-            targetMarketTitle: "Why Start in Mongolia?",
-            targetMarket1Title: "Extreme Heating Demand",
-            targetMarket1Desc: "Average winter temperature of -25°C, 8 months of heating required. The coldest and most heating-dependent market in the world.",
-            targetMarket2Title: "Abundant Renewables",
-            targetMarket2Desc: "2,200GW solar and 1,100GW wind potential. Ideal location for low-cost renewable-powered thermal storage.",
-            targetMarket3Title: "Government Decarbonization",
-            targetMarket3Desc: "30% renewable energy target by 2030. Strong policy demand for clean heating solutions.",
+            // Target Market
+            targetMarketTitle: "Initial Target Market",
+            targetMarket1Title: "Extreme Cold Regions",
+            targetMarket1Desc: "Regions with 6-8 months of heating demand. Cold climate markets have the highest need for reliable, clean heating solutions.",
+            targetMarket2Title: "Renewable-Rich Areas",
+            targetMarket2Desc: "Locations with abundant solar and wind potential. Ideal for low-cost renewable-powered thermal storage systems.",
+            targetMarket3Title: "Decarbonization Policies",
+            targetMarket3Desc: "Countries with aggressive renewable energy targets. Strong policy support for clean heating alternatives.",
 
             // Technology Comparison
             comparisonTitle: "Technology Comparison",
@@ -273,13 +273,13 @@ document.addEventListener('DOMContentLoaded', function() {
             driver3Desc: "EU, 미국, 한국 등 주요국에서 장주기 저장 기술에 대한 R&D 지원이 확대되고 있습니다.",
 
             // Target Market (Mongolia)
-            targetMarketTitle: "왜 몽골부터 시작하나요?",
-            targetMarket1Title: "극한의 난방 수요",
-            targetMarket1Desc: "겨울 평균 -25°C, 연간 8개월 난방 필수. 전 세계에서 가장 춥고, 가장 난방이 절실한 시장입니다.",
-            targetMarket2Title: "풍부한 재생에너지",
-            targetMarket2Desc: "태양광 2,200GW, 풍력 1,100GW 잠재량. 저렴한 재생전력 기반 열저장의 최적지입니다.",
-            targetMarket3Title: "정부 탈탄소 정책",
-            targetMarket3Desc: "2030년까지 재생에너지 비중 30% 목표. 청정 난방 솔루션에 대한 정책적 수요가 급증 중입니다.",
+            targetMarketTitle: "초기 타겟 시장",
+            targetMarket1Title: "극한 한랭 지역",
+            targetMarket1Desc: "연간 6-8개월 난방이 필요한 지역. 한랭 기후 시장은 안정적인 청정 난방 솔루션 수요가 가장 높습니다.",
+            targetMarket2Title: "재생에너지 풍부 지역",
+            targetMarket2Desc: "태양광 및 풍력 잠재량이 풍부한 지역. 저비용 재생전력 기반 열저장 시스템의 최적지입니다.",
+            targetMarket3Title: "탈탄소 정책 국가",
+            targetMarket3Desc: "적극적인 재생에너지 목표를 가진 국가들. 청정 난방 대안에 대한 강력한 정책 지원이 있습니다.",
 
             // Technology Comparison
             comparisonTitle: "경쟁사 대비 기술 비교",
@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Roadmap
             roadmapLabel: "로드맵",
-            roadmapTitle: "몽골에서 시작해, 세계로 확장합니다",
+            roadmapTitle: "기술 검증에서 글로벌 확장까지",
             roadmapDesc: "기술 실증부터 글로벌 상용화까지, 단계별 성장 전략입니다.",
             year2026: "2026",
             now: "지금",
@@ -443,10 +443,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // ===== HERO =====
         updateText('.hero-label', 'heroLabel');
-        const heroLines = document.querySelectorAll('.hero-line');
-        if (heroLines[0]) heroLines[0].textContent = t.heroLine1;
-        if (heroLines[1]) heroLines[1].textContent = t.heroLine2;
-        if (heroLines[2]) heroLines[2].textContent = t.heroLine3;
+        const heroLinesEl = document.querySelectorAll('.hero-line');
+        const heroTexts = [t.heroLine1, t.heroLine2, t.heroLine3];
+
+        heroLinesEl.forEach((line, lineIndex) => {
+            const text = heroTexts[lineIndex] || '';
+            line.innerHTML = '';
+            line.style.opacity = '1';
+
+            if (text) {
+                [...text].forEach((char, charIndex) => {
+                    const span = document.createElement('span');
+                    span.textContent = char === ' ' ? '\u00A0' : char;
+                    span.style.display = 'inline-block';
+                    span.style.opacity = '0.15';
+                    span.style.filter = 'blur(8px)';
+                    span.style.transform = 'translateY(15px) translateX(8px)';
+                    span.style.transition = 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+                    line.appendChild(span);
+
+                    setTimeout(() => {
+                        span.style.opacity = '1';
+                        span.style.filter = 'blur(0px)';
+                        span.style.transform = 'translateY(0) translateX(0)';
+                    }, 100 + (lineIndex * 300) + (charIndex * 35));
+                });
+            }
+        });
+
         updateText('.hero-description', 'heroDesc');
         const heroButtons = document.querySelectorAll('.hero-buttons .btn');
         if (heroButtons[0]) heroButtons[0].textContent = t.heroBtn1;

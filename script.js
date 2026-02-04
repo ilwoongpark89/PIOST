@@ -1034,16 +1034,18 @@ document.addEventListener('DOMContentLoaded', function() {
             const span = document.createElement('span');
             span.textContent = char === ' ' ? '\u00A0' : char;
             span.style.display = 'inline-block';
-            span.style.opacity = '0';
-            span.style.transform = 'translateY(20px) translateX(10px)';
-            span.style.transition = 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+            span.style.opacity = '0.15';
+            span.style.filter = 'blur(8px)';
+            span.style.transform = 'translateY(15px) translateX(8px)';
+            span.style.transition = 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
             line.appendChild(span);
 
-            // Staggered animation
+            // Staggered animation - blur to clear, bottom-right to original position
             setTimeout(() => {
                 span.style.opacity = '1';
+                span.style.filter = 'blur(0px)';
                 span.style.transform = 'translateY(0) translateX(0)';
-            }, 300 + (lineIndex * 400) + (charIndex * 30));
+            }, 400 + (lineIndex * 500) + (charIndex * 40));
         });
     });
 

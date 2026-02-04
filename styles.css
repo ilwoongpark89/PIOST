@@ -1594,7 +1594,8 @@ section {
 }
 
 .team-member:hover .member-avatar {
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 8px 30px rgba(225, 29, 72, 0.3);
 }
 
 .member-info h3 {
@@ -1925,6 +1926,23 @@ section {
     font-weight: 800;
     color: white;
     margin-bottom: 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.mission-goal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mission-goal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mission-goal:hover .goal-value {
+    transform: scale(1.1);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .goal-label {
@@ -2226,8 +2244,40 @@ section {
     left: 0;
     right: 0;
     height: 3px;
-    background: var(--primary);
+    background: linear-gradient(90deg, var(--primary), #fb7185, var(--primary));
+    background-size: 200% 100%;
+    animation: investorGlow 3s ease-in-out infinite;
 }
+
+@keyframes investorGlow {
+    0%, 100% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+}
+
+.investor-card {
+    animation: subtleFloat 6s ease-in-out infinite;
+}
+
+@keyframes subtleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Highlight items staggered animation */
+.highlight-item {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.highlight-item.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.highlight-item:nth-child(1) { transition-delay: 0.1s; }
+.highlight-item:nth-child(2) { transition-delay: 0.2s; }
+.highlight-item:nth-child(3) { transition-delay: 0.3s; }
 
 .investor-content {
     padding: 3rem 2.5rem;

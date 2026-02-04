@@ -1100,6 +1100,46 @@ document.addEventListener('DOMContentLoaded', function() {
         revealObserver.observe(el);
     });
 
+    // Mission goals staggered reveal
+    const missionGoals = document.querySelectorAll('.mission-goal');
+    const missionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const goals = entry.target.querySelectorAll('.mission-goal');
+                goals.forEach((goal, i) => {
+                    setTimeout(() => {
+                        goal.classList.add('revealed');
+                    }, i * 200);
+                });
+                missionObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    const missionGoalsContainer = document.querySelector('.mission-goals');
+    if (missionGoalsContainer) {
+        missionObserver.observe(missionGoalsContainer);
+    }
+
+    // Highlight items staggered reveal
+    const highlightsContainer = document.querySelector('.investor-highlights');
+    if (highlightsContainer) {
+        const highlightObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const items = entry.target.querySelectorAll('.highlight-item');
+                    items.forEach((item, i) => {
+                        setTimeout(() => {
+                            item.classList.add('revealed');
+                        }, i * 150);
+                    });
+                    highlightObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        highlightObserver.observe(highlightsContainer);
+    }
+
     // ============================================
     // Subtle Parallax on Hero
     // ============================================

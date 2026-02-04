@@ -5,48 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PIOST Inc. - Thermal Energy Storage Solutions</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
+            <a href="#" class="logo">
                 <span class="logo-text">PIOST</span>
-            </div>
+            </a>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#why-tes">Why TES</a></li>
+                <li><a href="#why-carnot">Carnot Battery</a></li>
                 <li><a href="#market">Market</a></li>
-                <li><a href="#technology">Technology</a></li>
                 <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#strategy">Strategy</a></li>
                 <li><a href="#programs">Programs</a></li>
                 <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
             </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-logo">
-                <h1 class="hero-logo-text">PIOST</h1>
+        <div class="hero-bg"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <p class="hero-label">Thermal Energy Storage & Utilization</p>
+            <h1 class="hero-title">
+                <span class="hero-line">Accelerating</span>
+                <span class="hero-line highlight">Carbon Neutrality</span>
+                <span class="hero-line">Through Heat</span>
+            </h1>
+            <p class="hero-description">
+                Storing renewable energy as heat, utilizing it when needed. PIOST develops thermal energy storage and Carnot Battery technologies to bridge the gap between renewables and grid stability.
+            </p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">Learn More</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
             </div>
-            <h2 class="hero-title">Revolutionizing Thermal Energy Storage</h2>
-            <p class="hero-subtitle">Building sustainable heating infrastructure for a carbon-neutral future</p>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="container">
-            <h2>About PIOST</h2>
-            <div class="about-grid">
-                <div class="about-content">
-                    <h3>Replacing Fossil-Fuel Boilers with Clean, Renewable-Energy Based Heating</h3>
-                    <p>PIOST Inc. is revolutionizing thermal energy storage through innovative heating and hot-water supply systems. Our technology enables long-duration heat supply by storing renewable electricity as heat energy, making sustainable heating a reality.</p>
-                    <p>We are demonstrating our TES systems in Mongolia and preparing for European market entry, focusing on decarbonizing heating to complete the global energy transition.</p>
+            <div class="section-header">
+                <span class="section-label">About Us</span>
+                <h2 class="section-title">Thermal Energy for Carbon Neutrality</h2>
+                <p class="section-description">
+                    PIOST Inc. is a deep-tech startup founded in 2024, dedicated to accelerating carbon neutrality through thermal energy storage and utilization. We develop technologies that store surplus renewable energy as high-temperature heat and convert it back to usable energy when needed.
+                </p>
+            </div>
+            <div class="about-content-extended">
+                <p>The global transition to renewable energy faces a critical challenge: solar and wind power are intermittent, but energy demand is constant. PIOST addresses this gap by developing cost-effective thermal energy storage systems using abundant materials like rock and sand. Our Carnot Battery technology enables long-duration energy storage, providing a pathway to reliable, 24/7 clean energy and a carbon-neutral future.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-tes" class="why-tes">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">The Challenge</span>
+                <h2 class="section-title">Why Thermal Energy Must Be Stored</h2>
+            </div>
+            <div class="why-content">
+                <div class="why-explanation">
+                    <h3>What is Thermal Energy Storage (TES)?</h3>
+                    <p>Thermal Energy Storage (TES) is a technology that stores energy in the form of heat for later use. Unlike batteries that store electricity chemically, TES systems capture and retain thermal energy in materials like rock, sand, or molten salt at high temperatures. When energy is needed, this stored heat can be released for heating applications or converted back to electricity through steam turbines.</p>
+
+                    <h3>Why is TES Essential for the Energy Transition?</h3>
+                    <p>The global shift to renewable energy faces a fundamental challenge: the sun doesn't always shine, and the wind doesn't always blow. Solar and wind power generation is inherently intermittent, creating a mismatch between when energy is produced and when it is consumed. Without effective storage solutions, excess renewable energy is wasted, and fossil fuel backup systems must fill the gaps.</p>
+
+                    <p>TES offers a compelling solution to this challenge. Heat can be stored for extended periods with minimal loss, making TES ideal for long-duration energy storage measured in hours or even days. The storage materials—rock and sand—are abundant, inexpensive, and environmentally benign. Unlike lithium-ion batteries, TES systems don't rely on rare earth minerals or present fire hazards.</p>
                 </div>
-                <div class="about-image">
-                    <div class="heat-icon">🔥</div>
+                <div class="why-hope">
+                    <div class="hope-card">
+                        <h4>A Hopeful Future with TES</h4>
+                        <p>Imagine a world where every community can store summer's abundant solar energy to heat homes through winter. Where industrial waste heat is captured and repurposed rather than released into the atmosphere. Where remote villages gain energy independence through simple, durable storage systems that last for decades.</p>
+                        <p>This future is within reach. TES technology has been proven at scale in concentrated solar power plants around the world. Now, advances in materials science and heat transfer engineering are making TES economically viable for a much broader range of applications—from residential heating to grid-scale energy storage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-carnot" class="why-carnot">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">The Opportunity</span>
+                <h2 class="section-title">Why Carnot Battery?</h2>
+            </div>
+            <div class="why-content">
+                <div class="why-explanation">
+                    <h3>What is a Carnot Battery?</h3>
+                    <p>A Carnot Battery is an advanced energy storage system that converts electricity to heat for storage, then converts that heat back to electricity when needed. Named after the French physicist Sadi Carnot who established the theoretical limits of heat engine efficiency, this technology represents the cutting edge of thermal energy storage.</p>
+
+                    <p>The process works in three stages: First, excess electricity (typically from renewable sources) powers electric heaters to raise the temperature of a thermal storage medium to very high temperatures—in our case, exceeding 1,000°C. Second, this thermal energy is retained in insulated storage tanks with minimal loss. Third, when electricity is needed, the stored heat generates steam that drives a turbine to produce power.</p>
+
+                    <h3>Why Carnot Battery Over Other Storage Technologies?</h3>
+                    <p>While lithium-ion batteries dominate short-duration storage (2-4 hours), they become prohibitively expensive for longer durations. Pumped hydro storage offers long duration but requires specific geography. Carnot Batteries fill a critical gap: they provide cost-effective storage for 8-24+ hours using widely available materials and proven industrial components.</p>
+
+                    <p>The economics are compelling. At high temperatures, thermal storage is 10-20 times cheaper per kWh than battery storage. The round-trip efficiency of modern Carnot Battery systems reaches 50-70%, competitive with other storage technologies when accounting for total system costs.</p>
+                </div>
+                <div class="why-hope">
+                    <div class="hope-card">
+                        <h4>Powering the Grid of Tomorrow</h4>
+                        <p>Carnot Batteries represent more than an incremental improvement—they enable a fundamental transformation of our energy system. With cost-effective long-duration storage, renewable energy can provide reliable baseload power, replacing coal and natural gas plants that currently ensure grid stability.</p>
+                        <p>The potential is enormous. The International Energy Agency estimates that achieving net-zero emissions by 2050 will require 2,000 GW of long-duration storage capacity globally. Carnot Batteries, built from steel, rock, and sand, can be manufactured at scale using existing industrial capabilities, creating jobs and economic opportunity while accelerating the clean energy transition.</p>
+                        <p>At PIOST, we are working to make this vision a reality—one thermal storage system at a time.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -54,8 +128,13 @@
 
     <section id="market" class="market">
         <div class="container">
-            <h2>Market Opportunity</h2>
-            <p class="section-subtitle">The global thermal energy storage market is experiencing exponential growth</p>
+            <div class="section-header">
+                <span class="section-label">Market Opportunity</span>
+                <h2 class="section-title">A Growing Global Market</h2>
+                <p class="section-description">
+                    The thermal energy storage market is experiencing exponential growth as the world transitions to renewable energy.
+                </p>
+            </div>
             <div class="market-stats">
                 <div class="stat-card">
                     <div class="stat-number">10x</div>
@@ -64,88 +143,34 @@
                     <span class="stat-source">McKinsey</span>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">670GW</div>
+                    <div class="stat-number">670<span class="stat-unit">GW</span></div>
                     <div class="stat-label">PV Capacity in Europe</div>
                     <p>Photovoltaic capacity projected to reach 670GW by 2028</p>
-                    <span class="stat-source">EEA</span>
+                    <span class="stat-source">European Environment Agency</span>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">49%</div>
+                    <div class="stat-number">49<span class="stat-unit">%</span></div>
                     <div class="stat-label">Energy for Heating</div>
                     <p>Heat accounts for nearly half of global energy demand</p>
-                    <span class="stat-source">IEA</span>
+                    <span class="stat-source">International Energy Agency</span>
                 </div>
-            </div>
-            <div class="market-opportunity">
-                <h3>Why TES? Why Now?</h3>
-                <div class="opportunity-grid">
-                    <div class="opportunity-item">
-                        <span class="opportunity-icon">🌍</span>
-                        <h4>Energy Transition</h4>
-                        <p>Decarbonizing heating is essential to complete the global energy transition</p>
-                    </div>
-                    <div class="opportunity-item">
-                        <span class="opportunity-icon">⚡</span>
-                        <h4>Renewable Integration</h4>
-                        <p>TES enables stable heat supply despite renewable energy fluctuations</p>
-                    </div>
-                    <div class="opportunity-item">
-                        <span class="opportunity-icon">💰</span>
-                        <h4>Cost Reduction</h4>
-                        <p>Supporting EU ETS and Fit for 55 goals by reducing CO₂ and energy costs</p>
-                    </div>
+                <div class="stat-card">
+                    <div class="stat-number">1,500<span class="stat-unit">GW</span></div>
+                    <div class="stat-label">Storage Target 2030</div>
+                    <p>COP29 pledge to increase global energy storage capacity 6x by 2030</p>
+                    <span class="stat-source">IEA Net Zero Scenario</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="technology" class="technology">
-        <div class="container">
-            <h2>Core Technologies</h2>
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <div class="tech-number">01</div>
-                    <h3>Rock & Sand Storage Medium</h3>
-                    <p>Composite rock & sand heat storage medium for cost advantage and superior thermal retention</p>
+                <div class="stat-card">
+                    <div class="stat-number">11.7<span class="stat-unit">%</span></div>
+                    <div class="stat-label">TES CAGR</div>
+                    <p>TES market expected to reach $10.9B by 2030</p>
+                    <span class="stat-source">Grand View Research</span>
                 </div>
-                <div class="tech-card">
-                    <div class="tech-number">02</div>
-                    <h3>Direct Condensation Heat-Exchange</h3>
-                    <p>Advanced direct condensation technology for enhanced heat transfer rate and efficiency</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-number">03</div>
-                    <h3>High-Temperature Energy Storage</h3>
-                    <p>Industry-leading storage capability of upper 800°C for diverse applications</p>
-                </div>
-                <div class="tech-card">
-                    <div class="tech-number">04</div>
-                    <h3>Modular Design</h3>
-                    <p>Scalable modular system for easy deployment from residential to industrial scale</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="solutions" class="solutions">
-        <div class="container">
-            <h2>Our Solutions</h2>
-            <p class="section-subtitle">Customizing TES heating models from single unit homes to industrial applications</p>
-            <div class="solutions-grid">
-                <div class="solution-card">
-                    <div class="solution-icon">🏠</div>
-                    <h3>Type 1: Residential</h3>
-                    <p>Off-grid heating solution for individual homes. Perfect for remote areas and sustainable independent living with renewable energy integration.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">🏘️</div>
-                    <h3>Type 2: Community</h3>
-                    <p>Integrated TES systems for residential clusters and shared heating networks. Scalable solutions for neighborhoods and multi-unit buildings.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">⚡</div>
-                    <h3>ESS-TES Integrated Solution</h3>
-                    <p>Building an integrated heating and power storage solution combining Electricity Storage Systems (ESS) with TES for complete energy independence.</p>
+                <div class="stat-card">
+                    <div class="stat-number">6.5<span class="stat-unit">GW</span></div>
+                    <div class="stat-label">Global CSP Capacity</div>
+                    <p>Total installed concentrated solar power capacity in 2022</p>
+                    <span class="stat-source">IRENA</span>
                 </div>
             </div>
         </div>
@@ -153,33 +178,113 @@
 
     <section id="competitive" class="competitive">
         <div class="container">
-            <h2>Competitive Advantage</h2>
-            <p class="section-subtitle">Superior technology delivering unmatched performance</p>
-            <div class="comparison-table">
-                <div class="comparison-row comparison-header">
-                    <div class="comparison-cell">Category</div>
-                    <div class="comparison-cell">Competitors</div>
-                    <div class="comparison-cell highlight">PIOST Inc.</div>
+            <div class="section-header">
+                <span class="section-label">Competitive Edge</span>
+                <h2 class="section-title">Technology Comparison</h2>
+                <p class="section-description">
+                    Superior specifications across all key performance metrics.
+                </p>
+            </div>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Company A</th>
+                            <th>Company B</th>
+                            <th>Company C</th>
+                            <th class="highlight">PIOST Inc.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Max Temperature</strong></td>
+                            <td>750°C</td>
+                            <td>450°C</td>
+                            <td>600-800°C</td>
+                            <td class="highlight"><strong>1,000°C+</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Storage Material</strong></td>
+                            <td>Crushed rocks</td>
+                            <td>Concrete (HEATCRETE)</td>
+                            <td>Volcanic rocks</td>
+                            <td class="highlight"><strong>Composite rock & sand</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Heat Transfer</strong></td>
+                            <td>Resistive heating</td>
+                            <td>Tube heat exchanger</td>
+                            <td>Hot air circulation</td>
+                            <td class="highlight"><strong>Quenching & tube pipe</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>System Type</strong></td>
+                            <td>Modular</td>
+                            <td>Modular</td>
+                            <td>Plant-scale</td>
+                            <td class="highlight"><strong>Modular</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Solutions</span>
+                <h2 class="section-title">From Home to Grid</h2>
+                <p class="section-description">
+                    Scalable thermal energy solutions that grow with your needs.
+                </p>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-header">
+                        <div class="solution-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        </div>
+                        <span class="solution-type">Scale 1</span>
+                    </div>
+                    <h3>Single Household</h3>
+                    <p>Compact TES unit for individual homes. Ideal for off-grid heating, remote areas, and sustainable independent living with renewable energy integration.</p>
+                    <ul class="solution-features">
+                        <li>Independent heating system</li>
+                        <li>Off-grid capability</li>
+                        <li>Renewable energy integration</li>
+                    </ul>
                 </div>
-                <div class="comparison-row">
-                    <div class="comparison-cell"><strong>Max Temperature</strong></div>
-                    <div class="comparison-cell">500-650°C</div>
-                    <div class="comparison-cell highlight"><strong>Upper 800°C</strong></div>
+                <div class="solution-card">
+                    <div class="solution-header">
+                        <div class="solution-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+                        </div>
+                        <span class="solution-type">Scale 2</span>
+                    </div>
+                    <h3>Small Building</h3>
+                    <p>TES systems for multi-unit residential buildings and small commercial facilities. Shared heating infrastructure with optimized cost efficiency.</p>
+                    <ul class="solution-features">
+                        <li>Multi-unit building support</li>
+                        <li>Shared heating network</li>
+                        <li>Economies of scale</li>
+                    </ul>
                 </div>
-                <div class="comparison-row">
-                    <div class="comparison-cell"><strong>Storage Material</strong></div>
-                    <div class="comparison-cell">Molten salt / Sand</div>
-                    <div class="comparison-cell highlight"><strong>Composite rock & sand</strong><br><small>Cost advantage</small></div>
-                </div>
-                <div class="comparison-row">
-                    <div class="comparison-cell"><strong>Heat Transfer</strong></div>
-                    <div class="comparison-cell">Indirect</div>
-                    <div class="comparison-cell highlight"><strong>Direct condensation</strong><br><small>Enhanced heat transfer rate</small></div>
-                </div>
-                <div class="comparison-row">
-                    <div class="comparison-cell"><strong>System Type</strong></div>
-                    <div class="comparison-cell">Unit / Plant</div>
-                    <div class="comparison-cell highlight"><strong>Modular system</strong><br><small>Scalability & ease of deployment</small></div>
+                <div class="solution-card">
+                    <div class="solution-header">
+                        <div class="solution-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        </div>
+                        <span class="solution-type">Scale 3</span>
+                    </div>
+                    <h3>Regional District</h3>
+                    <p>Large-scale TES for district heating and Carnot Battery applications. Grid-connected systems for regional energy storage and power generation.</p>
+                    <ul class="solution-features">
+                        <li>District heating network</li>
+                        <li>Carnot Battery integration</li>
+                        <li>Grid-scale storage capacity</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -187,55 +292,146 @@
 
     <section id="roadmap" class="roadmap">
         <div class="container">
-            <h2>Roadmap</h2>
-            <p class="section-subtitle">Strategic growth from R&D to European market expansion</p>
+            <div class="section-header">
+                <span class="section-label">Roadmap</span>
+                <h2 class="section-title">Our Journey to Market</h2>
+                <p class="section-description">
+                    A systematic approach from technology validation to global commercialization.
+                </p>
+            </div>
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-year">2025</div>
+                <div class="timeline-item current">
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2026</span>
+                        <span class="timeline-badge">Now</span>
+                    </div>
                     <div class="timeline-content">
-                        <h3>Initial Market Entry</h3>
+                        <h3>Technology Validation & Seed Stage</h3>
                         <ul>
-                            <li>Complete TES prototype and pilot demonstration in Mongolia</li>
-                            <li>Inha University joint R&D collaboration</li>
-                            <li>Attract seed/accelerator funding</li>
-                            <li>Mongolia B2C revenue model validation</li>
+                            <li>Complete TES prototype development and lab-scale demonstration</li>
+                            <li>Validate core technologies: 1,000°C+ storage, hybrid steam generation</li>
+                            <li>Launch Mongolia pilot project for cold-climate validation</li>
+                            <li>Secure seed funding and accelerator program participation</li>
+                            <li>File PCT patents for international IP protection</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-year">2026-2027</div>
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2027-28</span>
+                    </div>
                     <div class="timeline-content">
-                        <h3>Revenue Expansion</h3>
+                        <h3>Pilot Deployment & Series A</h3>
                         <ul>
-                            <li>Validate TES performance through European pilot operations</li>
-                            <li>Establish early B2C partnerships with local companies</li>
-                            <li>Obtain product certification and export approval</li>
-                            <li>Apply to Horizon Europe, EIC Accelerator programs</li>
+                            <li>Deploy commercial-scale pilot systems in Mongolia and Europe</li>
+                            <li>Obtain CE marking and international product certifications</li>
+                            <li>Apply to Horizon Europe, EIC Accelerator, and KOICA programs</li>
+                            <li>Establish strategic partnerships with European energy companies</li>
+                            <li>Raise Series A funding for manufacturing scale-up</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-year">2027-2028</div>
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2029-30</span>
+                    </div>
                     <div class="timeline-content">
-                        <h3>B2B/B2G Expansion</h3>
+                        <h3>Commercial Scale & Expansion</h3>
                         <ul>
-                            <li>Commercialize modular TES systems and O&M service models</li>
-                            <li>Introduce Heating-as-a-Service (HaaS) subscription model</li>
-                            <li>Expand B2G contracts with European public institutions</li>
-                            <li>Secure venture capital investment</li>
+                            <li>Establish manufacturing facility for volume production</li>
+                            <li>Launch Heating-as-a-Service (HaaS) subscription model</li>
+                            <li>Expand to Northern and Central European markets</li>
+                            <li>Develop utility-scale Carnot Battery systems for grid storage</li>
+                            <li>Target break-even and path to profitability</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-year">2028-2029</div>
+                    <div class="timeline-marker">
+                        <span class="timeline-year">2031+</span>
+                    </div>
                     <div class="timeline-content">
-                        <h3>Long-term Growth</h3>
+                        <h3>Global Leadership</h3>
                         <ul>
-                            <li>Localize production and establish mass-manufacturing lines</li>
-                            <li>Diversify exports across Central and Northern Europe</li>
-                            <li>Contribute to regional net-zero energy communities</li>
-                            <li>Explore ODA and climate-tech funding opportunities</li>
+                            <li>Become a leading Carnot Battery solution provider globally</li>
+                            <li>Expand to Asia-Pacific and North American markets</li>
+                            <li>Develop next-generation ultra-high-temperature systems</li>
+                            <li>Contribute to global net-zero energy transition goals</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="strategy" class="strategy">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Strategy & Technology</span>
+                <h2 class="section-title">Innovation Roadmap</h2>
+                <p class="section-description">
+                    Three focused R&D directions, each driven by two core technologies.
+                </p>
+            </div>
+
+            <div class="pillars-grid">
+                <div class="pillar-column">
+                    <div class="pillar-card">
+                        <div class="pillar-number">01</div>
+                        <div class="pillar-content">
+                            <h3>Development of Various Scale TES Systems</h3>
+                            <p>Developing thermal energy storage systems across multiple scales—from single households to small buildings and regional district heating.</p>
+                        </div>
+                    </div>
+                    <div class="tech-card">
+                        <h4>High-Temperature Heating System</h4>
+                        <p>Direct condensation heat exchange technology enabling efficient charging to 1,000°C+ using steam as the heat transfer medium.</p>
+                        <div class="tech-tag">Heating Method</div>
+                    </div>
+                    <div class="tech-card">
+                        <h4>Advanced Thermal Insulation</h4>
+                        <p>Multi-layer insulation engineering with rock & sand composite medium, minimizing heat loss during long-duration storage.</p>
+                        <div class="tech-tag">Heat Loss Reduction</div>
+                    </div>
+                </div>
+
+                <div class="pillar-column">
+                    <div class="pillar-card">
+                        <div class="pillar-number">02</div>
+                        <div class="pillar-content">
+                            <h3>Thermal Energy Charge/Discharge Optimization</h3>
+                            <p>Developing operation strategies for diverse TES configurations with varying sizes, charging methods, and discharge patterns.</p>
+                        </div>
+                    </div>
+                    <div class="tech-card">
+                        <h4>Charge/Discharge Simulation</h4>
+                        <p>Computational modeling for diverse operating scenarios, optimizing charging methods, duration, and discharge patterns.</p>
+                        <div class="tech-tag">Simulation</div>
+                    </div>
+                    <div class="tech-card">
+                        <h4>Technical Limit Prediction</h4>
+                        <p>Physics-based and data-driven models to predict performance boundaries under various operating conditions.</p>
+                        <div class="tech-tag">Limit Prediction</div>
+                    </div>
+                </div>
+
+                <div class="pillar-column">
+                    <div class="pillar-card">
+                        <div class="pillar-number">03</div>
+                        <div class="pillar-content">
+                            <h3>Stable Steam Generation for Carnot Battery</h3>
+                            <p>Ensuring consistent, high-quality steam production essential for power generation in Carnot Battery applications.</p>
+                        </div>
+                    </div>
+                    <div class="tech-card">
+                        <h4>Hybrid Steam Generation</h4>
+                        <p>Once-through and quenching hybrid system for stable steam quality control under varying temperature conditions.</p>
+                        <div class="tech-tag">Steam Methodology</div>
+                    </div>
+                    <div class="tech-card">
+                        <h4>AI-based Operation Control</h4>
+                        <p>Reinforcement learning-based digital twin for real-time optimal control, ensuring consistent steam quality.</p>
+                        <div class="tech-tag">AI Control</div>
                     </div>
                 </div>
             </div>
@@ -244,27 +440,39 @@
 
     <section id="milestones" class="milestones">
         <div class="container">
-            <h2>Key Milestones</h2>
+            <div class="section-header">
+                <span class="section-label">Research & Partnership</span>
+                <h2 class="section-title">Built on Strong Foundations</h2>
+            </div>
             <div class="milestones-grid">
                 <div class="milestone-card">
-                    <div class="milestone-icon">🤝</div>
-                    <h3>Mongolia Partnership</h3>
-                    <p>MOU signed for Mongolia testbed partnership to validate TES under cold-climate conditions</p>
+                    <div class="milestone-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                    </div>
+                    <h3>Deep Research Expertise</h3>
+                    <p>Extensive research experience in steam generation, two-phase flow, and high-temperature thermal systems</p>
                 </div>
                 <div class="milestone-card">
-                    <div class="milestone-icon">🔬</div>
-                    <h3>R&D Collaboration</h3>
-                    <p>Joint research and development with Inha University for technology advancement</p>
+                    <div class="milestone-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 12h4"/><path d="M10 16h4"/><path d="M10 8h1"/></svg>
+                    </div>
+                    <h3>10+ Patents</h3>
+                    <p>Filed and registered patents covering core TES and heat exchange technologies</p>
                 </div>
                 <div class="milestone-card">
-                    <div class="milestone-icon">📋</div>
-                    <h3>IP Portfolio</h3>
-                    <p>Expanding domestic and international patent portfolios through PCT filings</p>
+                    <div class="milestone-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                    </div>
+                    <h3>Global Testbed</h3>
+                    <p>MOU signed for Mongolia testbed partnership to validate TES under extreme cold-climate conditions</p>
                 </div>
-                <div class="milestone-card">
-                    <div class="milestone-icon">🏭</div>
-                    <h3>Pilot Demonstration</h3>
-                    <p>Conducting overseas testbed demonstrations to prepare for European deployment</p>
+                <div class="milestone-card lab-card">
+                    <div class="milestone-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>
+                    </div>
+                    <h3>University Lab Spinoff</h3>
+                    <p>Founded from Inha University's MFTEL (Multiphase Flow & Thermal Engineering Lab), bringing academic research into commercial reality.</p>
+                    <a href="https://mftel.vercel.app" target="_blank" class="lab-link">Visit MFTEL Lab</a>
                 </div>
             </div>
         </div>
@@ -272,11 +480,16 @@
 
     <section id="programs" class="programs">
         <div class="container">
-            <h2>Startup Programs</h2>
-            <p class="section-subtitle">Systematically building startup and commercialization capabilities through diverse entrepreneurship programs</p>
+            <div class="section-header">
+                <span class="section-label">Track Record</span>
+                <h2 class="section-title">Startup Programs & Recognition</h2>
+                <p class="section-description">
+                    Systematically building startup and commercialization capabilities through diverse entrepreneurship programs.
+                </p>
+            </div>
 
-            <div class="programs-intro">
-                <p class="programs-highlight">We have participated in 15+ startup programs including accelerators, investment pitches, and international expansion initiatives to strengthen our business foundation and global network.</p>
+            <div class="programs-highlight">
+                <p>Participated in <strong>15+ startup programs</strong> including accelerators, investment pitches, and international expansion initiatives to strengthen our business foundation and global network.</p>
             </div>
 
             <div class="programs-grid">
@@ -285,15 +498,15 @@
                     <ul class="program-list">
                         <li>
                             <span class="program-name">Youth Startup Academy</span>
-                            <span class="program-desc">Business plan development and legal entity formation training</span>
+                            <span class="program-desc">Business plan development and legal entity formation</span>
                         </li>
                         <li>
                             <span class="program-name">Lab-driven Startup Program</span>
-                            <span class="program-desc">Innovation Lab performance sharing and commercialization support</span>
+                            <span class="program-desc">Innovation Lab commercialization support</span>
                         </li>
                         <li>
                             <span class="program-name">IP R&D Strategy Consulting</span>
-                            <span class="program-desc">Intellectual property portfolio development and strategy</span>
+                            <span class="program-desc">Intellectual property portfolio development</span>
                         </li>
                     </ul>
                 </div>
@@ -303,15 +516,15 @@
                     <ul class="program-list">
                         <li>
                             <span class="program-name">TIPS Investment Program</span>
-                            <span class="program-desc">Mentoring with leading VCs including Coolidge Corner Investment and POSCO Technology Investment</span>
+                            <span class="program-desc">Mentoring with leading VCs</span>
                         </li>
                         <li>
                             <span class="program-name">TIPS Challenge</span>
-                            <span class="program-desc">IR pitching and investor networking with TAB Angel Partners</span>
+                            <span class="program-desc">IR pitching and investor networking</span>
                         </li>
                         <li>
                             <span class="program-name">Regular IR Sessions</span>
-                            <span class="program-desc">Ongoing investor relations and pitch deck refinement</span>
+                            <span class="program-desc">Ongoing investor relations</span>
                         </li>
                     </ul>
                 </div>
@@ -321,33 +534,15 @@
                     <ul class="program-list">
                         <li>
                             <span class="program-name">Gladiator Program - Mongolia</span>
-                            <span class="program-desc">On-site business meetings and MOU signing with YN E Tulga</span>
+                            <span class="program-desc">MOU signing with YN E Tulga</span>
                         </li>
                         <li>
                             <span class="program-name">PickPack Partnership</span>
-                            <span class="program-desc">Collaboration discussions with 2025 Global R&D Creator</span>
+                            <span class="program-desc">2025 Global R&D Creator collaboration</span>
                         </li>
                         <li>
-                            <span class="program-name">Korea Mine Reclamation Corporation</span>
-                            <span class="program-desc">Strategic partnership with KOMIR Mongolia office</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="program-category">
-                    <h3>Recognition & Awards</h3>
-                    <ul class="program-list">
-                        <li>
-                            <span class="program-name">Next Challenger's Day</span>
-                            <span class="program-desc">Open innovation showcase and reverse pitching sessions</span>
-                        </li>
-                        <li>
-                            <span class="program-name">Lab Startup Festival</span>
-                            <span class="program-desc">IR pitch competition with Korea Youth Enterprise Foundation</span>
-                        </li>
-                        <li>
-                            <span class="program-name">Innovation Lab Performance</span>
-                            <span class="program-desc">Recognition for systematic startup development achievements</span>
+                            <span class="program-name">KOMIR Partnership</span>
+                            <span class="program-desc">Strategic partnership in Mongolia</span>
                         </li>
                     </ul>
                 </div>
@@ -364,7 +559,7 @@
                 </div>
                 <div class="stat-box">
                     <div class="stat-value">3</div>
-                    <div class="stat-desc">International Partnerships</div>
+                    <div class="stat-desc">International Partners</div>
                 </div>
                 <div class="stat-box">
                     <div class="stat-value">12+</div>
@@ -376,20 +571,18 @@
 
     <section id="team" class="team">
         <div class="container">
-            <h2>Leadership Team</h2>
-            <p class="section-subtitle">A multidisciplinary founding team integrating R&D, market analysis and business strategy</p>
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-avatar">JS</div>
-                    <h3>Dr. Junbeom Song</h3>
+            <div class="section-header">
+                <span class="section-label">Leadership</span>
+                <h2 class="section-title">Team</h2>
+            </div>
+            <div class="team-grid-simple">
+                <div class="team-member-simple">
+                    <h3>Junbeom Song</h3>
                     <p class="member-title">CEO & Co-Founder</p>
-                    <p class="member-role">Market analysis and business strategy development • Investment promotion</p>
                 </div>
-                <div class="team-member">
-                    <div class="member-avatar">IP</div>
-                    <h3>Prof. Il Woong Park</h3>
+                <div class="team-member-simple">
+                    <h3>Il Woong Park</h3>
                     <p class="member-title">CTO & Co-Founder</p>
-                    <p class="member-role">R&D planning • Resource management</p>
                 </div>
             </div>
         </div>
@@ -398,27 +591,58 @@
     <section id="vision" class="vision">
         <div class="container">
             <div class="vision-content">
-                <h2>Our Vision</h2>
-                <p class="vision-statement">A safer, longer, and more economical future of energy storage</p>
-                <p class="vision-tagline">Created by PIOST Inc.</p>
+                <span class="section-label">Our Vision</span>
+                <h2 class="vision-statement">Accelerating Carbon Neutrality<br>Through Thermal Innovation</h2>
+                <p class="vision-tagline">Storing renewable energy as heat today, powering a sustainable tomorrow.</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Ready to join the thermal energy revolution? Partner with us to bring sustainable heating solutions to your community.</p>
-            <div class="contact-info">
-                <a href="mailto:ilwoongpark@inha.ac.kr" class="contact-email">ilwoongpark@inha.ac.kr</a>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-label">Get in Touch</span>
+                    <h2>Ready to Partner?</h2>
+                    <p>Join us in bringing sustainable heating solutions to communities worldwide. We're open to investment discussions, partnership opportunities, and pilot project collaborations.</p>
+                    <a href="mailto:ilwoongpark@inha.ac.kr" class="contact-email">ilwoongpark@inha.ac.kr</a>
+                </div>
+                <div class="contact-card">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Inha University, 2N687<br>100 Inha-ro, Michuhol-gu, Incheon</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            <span>ilwoongpark@inha.ac.kr</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 PIOST Inc. Advancing Sustainable Thermal Energy Storage Technology</p>
-            <p class="footer-tagline">Delivering Next-Generation Hot Water and Heating through Thermal Energy Storage System</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">PIOST</span>
+                    <p>Advancing Sustainable Thermal Energy Storage Technology</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#why-tes">Why TES</a>
+                    <a href="#solutions">Solutions</a>
+                    <a href="#strategy">Strategy</a>
+                    <a href="#team">Team</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PIOST Inc. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 

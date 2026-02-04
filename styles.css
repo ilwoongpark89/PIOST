@@ -2255,6 +2255,18 @@ section {
 
     .lang-toggle {
         margin-left: 0;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.35rem 0.5rem;
+        border-radius: 50px;
+    }
+
+    .lang-btn {
+        font-size: 0.85rem;
+        padding: 0.35rem 0.6rem;
+    }
+
+    .navbar.scrolled .lang-toggle {
+        background: rgba(0, 0, 0, 0.05);
     }
 
     .hero-line {

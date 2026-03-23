@@ -1265,6 +1265,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const current = Math.floor(easeProgress * target);
 
             const unitEl = element.querySelector('.stat-unit');
+            const unitEl = element.querySelector('.stat-unit');
             if (unitEl) {
                 element.innerHTML = current.toLocaleString() + unitEl.outerHTML;
             } else {
@@ -1285,6 +1286,11 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const text = entry.target.textContent.trim();
+                // Skip year.month format (e.g. "2025.12")
+                if (/^\d{4}\.\d{1,2}$/.test(text)) {
+                    counterObserver.unobserve(entry.target);
+                    return;
+                }
                 const num = parseFloat(text.replace(/[,+x]/g, ''));
 
                 if (!isNaN(num)) {

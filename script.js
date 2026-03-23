@@ -1265,7 +1265,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const current = Math.floor(easeProgress * target);
 
             const unitEl = element.querySelector('.stat-unit');
-            const unitEl = element.querySelector('.stat-unit');
             if (unitEl) {
                 element.innerHTML = current.toLocaleString() + unitEl.outerHTML;
             } else {

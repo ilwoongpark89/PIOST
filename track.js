@@ -26,6 +26,25 @@
         return location.pathname + (location.hash || '');
     }
 
+    // First page of this session? Prefer sessionStorage (survives across page loads
+    // in the tab); if storage is blocked/throws, fall back to an in-memory flag so
+    // repeated section navigations in the same page load aren't each counted as a
+    // new visit (avoids both the undercount when storage throws and the overcount
+    // when setItem throws).
+    var memTracked = false;
+    function firstOfSession() {
+        try {
+            if (sessionStorage.getItem('piost_tracked')) return false;
+            sessionStorage.setItem('piost_tracked', '1');
+            memTracked = true;
+            return true;
+        } catch (e) {
+            if (memTracked) return false;
+            memTracked = true;
+            return true;
+        }
+    }
+
     var state = { path: null, active: 0, lastVisible: 0, visible: true };
 
     function post(body) {
@@ -58,11 +77,7 @@
         state.visible = (typeof document !== 'undefined') ? document.visibilityState === 'visible' : true;
         state.lastVisible = Date.now();
 
-        var first = false;
-        try {
-            first = !sessionStorage.getItem('piost_tracked');
-            if (first) sessionStorage.setItem('piost_tracked', 'true');
-        } catch (e) { /* private mode */ }
+        var first = firstOfSession();
 
         post({
             referrer: document.referrer || '',

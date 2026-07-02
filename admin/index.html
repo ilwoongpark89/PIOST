@@ -238,6 +238,7 @@
             <div class="grid g2" id="geo"></div>
             <div class="grid g3" id="acq"></div>
             <div class="grid g3" id="tech"></div>
+            <div id="drilldown"></div>
             <div id="sessionsPanel"></div>
             <div class="panel">
                 <div class="head">
@@ -468,7 +469,7 @@
             $('acq').innerHTML =
                 panel('유입 경로 (Referrer)', '', barList(referrers.slice(0, 8), fv.length, { empty: '경로 데이터 없음' })) +
                 panel('랜딩 페이지', '세션 첫 진입', barList(landing.slice(0, 8), fv.length, { empty: '페이지 데이터 없음' })) +
-                panel('인기 페이지', '조회수 · 평균 체류', barList(pageList.slice(0, 8).map(function (p) {
+                panel('인기 페이지', '누적 · 조회수 · 평균 체류', barList(pageList.slice(0, 8).map(function (p) {
                     return { label: p.label, value: p.value, sub: (d.pageDwell && d.pageDwell[p.raw]) ? fmtDur(d.pageDwell[p.raw]) : '' };
                 }), pageList.reduce(function (s, p) { return s + p.value; }, 0), { empty: '조회 데이터 없음' }));
 
@@ -483,6 +484,9 @@
                     { label: '국내 (KR)', value: kr, dot: NAVY },
                     { label: '해외', value: fv.length - kr, dot: '#A8A29E' },
                 ].filter(function (i) { return i.value > 0; }), fv.length, {}));
+
+            // country region/city drill-down (appears when a country is selected)
+            renderDrilldown();
 
             // sessions
             renderSessions();
@@ -583,6 +587,19 @@
             $('heat').innerHTML = html;
         }
 
+        function renderDrilldown() {
+            if (!S.country) { $('drilldown').innerHTML = ''; return; }
+            var inC = filteredVisits().filter(function (v) { return v.country === S.country; });
+            var regions = tally(inC, function (v) { return esc(v.region || 'Unknown'); });
+            var cities = tally(inC, function (v) { return esc(v.city || 'Unknown'); });
+            var hd = '<p style="margin-bottom:10px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-3)">';
+            $('drilldown').innerHTML = '<div class="panel"><div class="head"><div><h2>지역 · ' + esc(S.country) + '</h2></div>' +
+                '<button class="txt-btn" id="ddClose">닫기</button></div><div class="body"><div class="grid g2x">' +
+                '<div>' + hd + '지역</p>' + barList(regions.slice(0, 10), inC.length, { empty: '지역 데이터 없음' }) + '</div>' +
+                '<div>' + hd + '도시</p>' + barList(cities.slice(0, 10), inC.length, { empty: '도시 데이터 없음' }) + '</div>' +
+                '</div></div></div>';
+        }
+
         function renderSessions() {
             var sess = (S.data && S.data.sessions) || [];
             if (!sess.length) { $('sessionsPanel').innerHTML = ''; return; }
@@ -640,7 +657,11 @@
 
         function exportCsv() {
             var cols = ['timestamp', 'source', 'device', 'os', 'browser', 'country', 'region', 'city', 'ip', 'referrer', 'path', 'language', 'screen', 'userAgent'];
-            var escc = function (s) { return '"' + String(s == null ? '' : s).replace(/"/g, '""') + '"'; };
+            var escc = function (s) {
+                s = String(s == null ? '' : s);
+                if (/^[=+\-@\t\r]/.test(s)) s = "'" + s; // neutralize CSV formula injection (CWE-1236)
+                return '"' + s.replace(/"/g, '""') + '"';
+            };
             var rows = searchedVisits().map(function (v) {
                 var u = parseUA(v.userAgent);
                 return [v.timestamp, classifyUA(v.userAgent), u.device, u.os, u.browser, v.country, v.region, v.city, v.ip, v.referrer || '', v.path || '', v.language || '', v.screen || '', v.userAgent];
@@ -668,6 +689,8 @@
             Array.prototype.forEach.call(document.querySelectorAll('[data-country]'), function (b) {
                 b.onclick = function () { var c = b.getAttribute('data-country'); S.country = (S.country === c ? null : c); render(); };
             });
+            var ddClose = $('ddClose');
+            if (ddClose) ddClose.onclick = function () { S.country = null; render(); };
             Array.prototype.forEach.call($('tbl').querySelectorAll('tr.click'), function (tr) {
                 tr.onclick = function () { var i = Number(tr.getAttribute('data-row')); S.expanded = (S.expanded === i ? null : i); renderTable(filteredVisits()); bindTableRows(); };
             });

@@ -30,12 +30,13 @@ module.exports = async (req, res) => {
         let meta = {};
         try { meta = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch { meta = {}; }
 
-        const pvPath = String(meta.path || '/').substring(0, 80);
+        const pvPath = cleanPath(meta.path);
         const sid = String(meta.sid || '').substring(0, 64);
 
         // Engaged-time beacon: accumulate dwell (not a new page view).
         if (meta.durationOnly) {
-            const ms = Math.min(Math.max(Number(meta.ms) || 0, 0), 30 * 60 * 1000); // clamp 0..30min
+            // Floor to an integer — Redis HINCRBY/INCRBY reject fractional increments.
+            const ms = Math.floor(Math.min(Math.max(Number(meta.ms) || 0, 0), 30 * 60 * 1000)); // clamp 0..30min
             if (ms > 0) {
                 const cmds = [
                     ['HINCRBY', P + 'dwell_ms', pvPath, ms],
@@ -144,4 +145,12 @@ module.exports = async (req, res) => {
 
 function safeDecode(s) {
     try { return decodeURIComponent(s); } catch { return s; }
+}
+
+// Bound stored pageview/dwell hash keys: drop query, whitelist charset, cap length.
+// Prevents crafted paths from inflating hash-field cardinality without bound.
+function cleanPath(p) {
+    let s = String(p || '/').split('?')[0].split('&')[0].substring(0, 64).replace(/[^\w/#.\-]/g, '');
+    if (s[0] !== '/') s = '/' + s;
+    return s || '/';
 }

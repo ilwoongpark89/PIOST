@@ -50,9 +50,10 @@ module.exports = async (req, res) => {
             return v;
         }).filter(Boolean);
 
-        // Filter visits by period.
+        // Filter visits by period. The window must cover exactly `period` calendar
+        // days (today back to today-(period-1)) so it aligns with dailyStats/periodTotal.
         const periodStart = new Date();
-        periodStart.setDate(periodStart.getDate() - period);
+        periodStart.setDate(periodStart.getDate() - (period - 1));
         periodStart.setHours(0, 0, 0, 0);
         const filteredVisits = parsedVisits.filter((v) => v.timestamp && new Date(v.timestamp) >= periodStart);
 
